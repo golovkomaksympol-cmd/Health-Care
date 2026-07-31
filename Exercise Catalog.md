@@ -25,8 +25,8 @@ Pick-list for the `plan-workout` skill. The agent **selects from here** (filtere
 ## Hinge (hip-dominant)
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
 |---|---|---|---|---|---|---|
-| Romanian Deadlift | hamstrings, glutes, erectors | Str/Hyp | BB/DB | spine⚠, ecc | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=romanian+deadlift) |
-| Conventional Deadlift | post chain, quads | Str | BB, rack | spine⚠ | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=conventional+deadlift) |
+| Romanian Deadlift | hamstrings, glutes, erectors | Str/Hyp | BB/DB | spine⚠, ecc | ✓ | [🎥](https://www.youtube.com/shorts/QbbURJEUALw) |
+| Conventional Deadlift | post chain, quads | Str | BB, rack | spine⚠ | | [🎥](https://www.youtube.com/shorts/K8a_Ab9R-aI) |
 | Trap-bar Deadlift | post chain, quads | Str | trap | spine⚠ | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=trap+bar+deadlift) |
 | Single-leg RDL | hamstring, glute, balance | Hyp/Stab | DB/KB | U, ecc | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=single+leg+rdl) |
 | 45° Back Extension | erectors, glutes, hams | Hyp/ME | mach/+plate | spine⚠ | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=back+extension) |
@@ -35,7 +35,7 @@ Pick-list for the `plan-workout` skill. The agent **selects from here** (filtere
 ## Hip extension / glute (patterning)
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
 |---|---|---|---|---|---|---|
-| Machine Hip Thrust (Glute Drive) | glute max | Str/Hyp | mach | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=hip+thrust) |
+| Machine Hip Thrust (Glute Drive) | glute max | Str/Hyp | mach | | ✓ | [🎥](https://www.youtube.com/shorts/2jFSouNMeS4) |
 | Single-leg Glute Bridge | glute max (timing) | Stab/Hyp | BW/band | U | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=single+leg+glute+bridge) |
 | Banded Glute Bridge | glute activation | Stab/activation | band | | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=banded+glute+bridge) |
 | Clamshell | glute med (pelvic stab) | Stab/activation | band | | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=clamshell) |
@@ -49,18 +49,18 @@ Pick-list for the `plan-workout` skill. The agent **selects from here** (filtere
 ## Unilateral lower / lunge
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
 |---|---|---|---|---|---|---|
-| Bulgarian Split Squat | quad, glute | Str/Hyp | DB/KB | U, ecc | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=bulgarian+split+squat) |
+| Bulgarian Split Squat | quad, glute | Str/Hyp | DB/KB | U, ecc | ✓ | [🎥](https://www.youtube.com/shorts/or1frhkjBDc) |
 | Reverse Lunge | quad, glute | Hyp | DB | U | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=reverse+lunge) |
 | Cossack Squat | adductors, mobility, lateral stability | Stab/Mob | BW/light | U | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=cossack+squat) |
 
 ## Horizontal push
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
 |---|---|---|---|---|---|---|
-| Barbell Bench Press | chest, triceps, front delt | Str/Hyp | BB, bench, rack | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=bench+press) |
-| Incline Bench Press | upper chest, triceps | Str/Hyp | BB, bench | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=incline+bench+press) |
+| Barbell Bench Press | chest, triceps, front delt | Str/Hyp | BB, bench, rack | | ✓ | [🎥](https://www.youtube.com/shorts/XjrsqShr-Ic) |
+| Incline Bench Press | upper chest, triceps | Str/Hyp | BB, bench | | ✓ | [🎥](https://www.youtube.com/shorts/Uf2To5LoYBE) |
 | Incline DB Press | upper chest | Hyp/Str | DB, bench | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=incline+dumbbell+press) |
 | Seated Machine (Incline) Press | chest | Hyp | mach | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=machine+chest+press) |
-| Dips | lower chest, triceps | Str/Hyp | BW/+weight | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=dips) |
+| Dips | lower chest, triceps | Str/Hyp | BW/+weight | | ✓ | [🎥](https://www.youtube.com/shorts/cFK5G2Exwwo) |
 
 ## Vertical push
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
@@ -71,17 +71,17 @@ Pick-list for the `plan-workout` skill. The agent **selects from here** (filtere
 ## Horizontal pull
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
 |---|---|---|---|---|---|---|
-| Barbell Bent-Over Row | lats, rhomboids, erectors | Str/Hyp | BB | spine⚠ | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=barbell+row) |
-| Seated Cable Row | lats, mid-back | Str/Hyp | cable/mach | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=seated+cable+row) |
+| Barbell Bent-Over Row | lats, rhomboids, erectors | Str/Hyp | BB | spine⚠ | ✓ | [🎥](https://www.youtube.com/shorts/phVtqawIgbk) |
+| Seated Cable Row | lats, mid-back | Str/Hyp | cable/mach | | ✓ | [🎥](https://www.youtube.com/shorts/LyZH4UGdDTc) |
 | Dual Pulley Row | lats, mid-back | Str/Hyp | cable | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=dual+pulley+row) |
-| Chest-supported Row (machine) | mid-back (no spine load) | Hyp | mach | | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=chest+supported+row) |
+| Chest-supported Row (machine) | mid-back (no spine load) | Hyp | mach | | | [🎥](https://www.youtube.com/shorts/G35gTqGcXXA) |
 
 ## Vertical pull
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
 |---|---|---|---|---|---|---|
-| Pull-up | lats, biceps | Str/Hyp | BW, bar | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=pull+up) |
+| Pull-up | lats, biceps | Str/Hyp | BW, bar | | ✓ | [🎥](https://www.youtube.com/shorts/HmVIu6OEsv4) |
 | Weighted Pull-up | lats, biceps | Str | +weight, bar | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=weighted+pull+up) |
-| Lat Pulldown | lats | Hyp/Str | cable/mach | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=lat+pulldown) |
+| Lat Pulldown | lats | Hyp/Str | cable/mach | | ✓ | [🎥](https://www.youtube.com/shorts/bNmvKpJSWKM) |
 
 ---
 
@@ -169,16 +169,16 @@ Sub-grouped by ProPower pattern. **Transfer is narrow — train the pattern you 
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
 |---|---|---|---|---|---|---|
 | Single-leg Heel Raise (Alfredson, eccentric) | gastroc/soleus + Achilles | Rehab/Str | BW/step | U, calf | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=alfredson+heel+drop) |
-| Standing Calf Raise | gastrocnemius (knee straight) | Hyp | mach/DB | calf | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=standing+calf+raise) |
+| Standing Calf Raise | gastrocnemius (knee straight) | Hyp | mach/DB | calf | | [🎥](https://www.youtube.com/shorts/a-x_NR-ibos) |
 | Seated Calf Raise | soleus (knee bent) | Hyp | mach | calf | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=seated+calf+raise) |
 
 ## Isolation patches (weak-link fillers)
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
 |---|---|---|---|---|---|---|
-| Lateral Raises | side delts | Hyp | DB/cable | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=lateral+raises) |
-| Face Pulls | rear delts, shoulder health | Hyp/Stab | cable/band | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=face+pulls) |
-| Biceps Curl | biceps | Hyp | DB/BB/mini | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=biceps+curl) |
-| Triceps Pushdown | triceps | Hyp | cable | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=triceps+pushdown) |
+| Lateral Raises | side delts | Hyp | DB/cable | | ✓ | [🎥](https://www.youtube.com/shorts/lMYs7FY8os4) |
+| Face Pulls | rear delts, shoulder health | Hyp/Stab | cable/band | | ✓ | [🎥](https://www.youtube.com/shorts/YjOb2nFvFy0) |
+| Biceps Curl | biceps | Hyp | DB/BB/mini | | ✓ | [🎥](https://www.youtube.com/shorts/MKWBV29S6c0) |
+| Triceps Pushdown | triceps | Hyp | cable | | ✓ | [🎥](https://www.youtube.com/shorts/d9l2AYTGIEs) |
 
 ## Mobility / activation (warm-up; Cook readiness)
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
