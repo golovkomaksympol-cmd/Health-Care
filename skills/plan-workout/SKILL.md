@@ -34,6 +34,20 @@ Model: `Models/Effort-Frequency Trade-off (Look, Feel, Perform).md`. **A session
 
 If the request itself conflicts with the stated driver (e.g. "give me a brutal ab session" under a FEEL block), **say so and offer both options** rather than quietly serving the request.
 
+### Dose-mismatch watch-list
+
+These are the recurring errors the model exists to catch. **Check the assembled session against this list, and surface in the output only the one or two that actually apply today** — don't recite the list.
+
+| Error | What it looks like | Correction |
+|---|---|---|
+| **Novelty instead of intent** | reaching for new exercises rather than contracting/bracing harder in known ones; repertoire growth feels like progress | keep the movement, raise the intent |
+| **Frequency serving the wrong goal** | adding sessions to chase size; frequency is a motor-learning lever, not a substitute for proximity-to-failure or volume | if driver is LOOK, add effort/volume — not days |
+| **Grinding control work** | FEEL work taken near failure | keep it submaximal so the frequency survives |
+| **LOOK dose at FEEL frequency** | near-failure work attempted daily | accumulating fatigue, no result → cut frequency or cut effort |
+| **FEEL dose at LOOK frequency** | low-load control work once a week | adapts nothing → raise frequency, keep it light |
+| **Max effort on a bad day** | chasing a PR when readiness is down | quality over PR; deload is a legitimate FEEL-dose day |
+| **Stacking novel eccentrics** | two new eccentric/plyo stimuli in one session | one novel stimulus at a time |
+
 ## Step 1 — Inputs (ask only what's still missing)
 - **Gym / equipment available** → equipment filter. Use the person's gym list if there is one; otherwise ask which gym or what kit they have.
 - **Time** (45 / 60 / 90 min) → volume / number of exercises.
@@ -80,6 +94,7 @@ Then generate from `Exercise Catalog.md` + `Training Framework.md` alone, and st
 ## Step 6 — Output (loggable — matches skill `log`)
 Group by block (**Warm-up / Power / Strength / Hypertrophy / Core**). Per exercise: `Name — sets × reps, load, @RIR, rest` **+ the exercise's 🎥 link from the Exercise Catalog** so the trainee can review form. Copy the link from the catalog row; don't invent a URL.
 - **First line: the driver** — `Driver: PERFORM (from Practices)` / `(inferred from last 5 sessions)` / `(you told me)`. Then a one-line rationale: which rotation day, what it balances, any readiness adjustment.
+- **Last line: ⚠️ one watch-out**, picked from the Step 0 watch-list because it applies to *this* session — e.g. «эти же упражнения, но жёстче интент — не гоняйся за новыми» or «FEEL-блок: не до отказа, иначе теряешь частоту». One line, concrete, tied to what's actually in the plan. Skip it only if nothing on the list is genuinely at risk today.
 - Power slot: prefer a pattern **not** trained recently (broaden the ProPower vector), and one that's practical in the trainee's gym (e.g. no med-ball throws without a wall → use cable rotation / plyo / jumps).
 - End: «после — залогируй (skill `log`); добей 40 г белка в 1–2 ч».
 Keep the plan tight; expand reasoning only if asked.
