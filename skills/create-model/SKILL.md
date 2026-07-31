@@ -9,6 +9,8 @@ Models are **working mechanistic models of reality — the ones that actually ch
 
 Output goes to `Models/<Name>.md`.
 
+**Language:** discuss in the **user's language**, whatever they wrote in. **Write the model file itself in English** — models are shared framework content read by every skill and by other people, so they stay in one language for consistency. Tell the user that's what you're doing if they wrote in another language.
+
 ## Step 1 — The gate (run BEFORE writing anything)
 
 All three must be true. If any fails, say which and **stop** — propose the alternative instead of writing a file.

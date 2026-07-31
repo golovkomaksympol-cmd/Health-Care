@@ -1,47 +1,55 @@
 ---
 name: deep-think
-description: Single entry point / router for serious thinking. Use when the user says "подумай со мной" / "ответь глубоко", "разбери проблему" / "по научному методу", asks "стоит ли / что лучше / что думают эксперты", or faces a strategic / irreversible / protocol-defining question. Routes to an empirical cycle (cheaply testable) or an expert panel (judgment). Tier 2/3 — answers can and should be expansive, NOT the short bot format.
+description: Single entry point / router for serious thinking. Use when the user asks to think something through properly ("think with me", "go deep", "break this problem down", "use the scientific method", "подумай со мной", "ответь глубоко", "разбери проблему"), asks "is it worth it / which is better / what would experts say", or faces a strategic, irreversible or protocol-defining question. Routes to an empirical cycle (cheaply testable) or an expert panel (judgment). Tier 2/3 — answers can and should be expansive, NOT the short bot format.
 ---
 
 # Deep-think skill (Tier 2/3) — the single door
 
 One entry point that **diagnoses where you are and routes you**: goal-gate → locate the problem → then either run the **empirical cycle** (Mode A, when there's a cheap falsification test) or convene the **expert panel** (Mode B, when it's judgment with no cheap test). The panel is a *generator* you can call inline from either mode. **Answers here can and should be long and developed** — overrides the default short bot format.
 
-Shared spine for both modes: `_core/Models/Scientific Method (Measure Zero).md` — **kill before confirm; presume your hypothesis is wrong.** The only difference between modes is *what kills the hypothesis*: **reality** (Mode A, empirical test) or an **adversarial red team** (Mode B, the best substitute when reality can't be cheaply queried).
+**Language:** reply in the **user's language**, whatever they wrote in. Keep technical and pharmacological terms in English (ApoB, mTOR, HOMA-IR, RIR) — translating them adds noise. This file is written in English; that is not the output language.
 
-## Step 0 — Goal gate (Munger-секретарь, ВСЕГДА первым)
-Загрузи цели/ограничения из профиля человека (файл целей — `User Context` / `Human Context` / `Practices`, как он назван у этого человека; если профиля нет — спроси цель и ограничение одной строкой). Прогони тему через три вопроса: **цель → ограничение → необходимые условия**. Это кресло ведёт **Munger-lens** (альтернативная стоимость + инверсия + право вето «не стоит внимания»), рядом Goldratt (это ли ограничение?) и Gigerenzer (стоит ли вообще считать?).
-- Если тема — **не текущее ограничение, не станет им скоро и не угрожаемое необходимое условие** → выдай: «не constraint-relevant: лог + дешёвый tripwire, внимание = ноль» и **СТОП. Ни цикл, ни панель не запускать.** (Escape-hatch: дёшево + необратимый хвост → всё равно лог+tripwire.)
-- Главная роль секретаря — **держать дискуссию в русле целей и противостоять «дотошному помогателю»**.
+Shared spine for both modes: `Models/Scientific Method (Measure Zero).md` — **kill before confirm; presume your hypothesis is wrong.** The only difference between modes is *what kills the hypothesis*: **reality** (Mode A, empirical test) or an **adversarial red team** (Mode B, the best substitute when reality can't be cheaply queried).
 
-## Step 0.5 — Locate & route (диспетчер)
-Пройди эти четыре вопроса вслух и объяви маршрут:
-1. **Есть ли задача — и хорошо ли поставлена?** Задача задаёт **внешний критерий истинности** (Tarski — критерий вне системы). Сделай её измеримой: **число + диапазон + горизонт** (даже «в попугаях», но считаемо; *if you don't measure, you don't care*). Расплывчатую («хочу выспаться», «хочу знать правду») → сначала переформулируй в измеримую. Если реальной задачи нет → назад в Step 0 (лог+tripwire, стоп).
-2. **На каком я этапе?** Назови точку в цикле: нет задачи / есть задача, нет гипотез / есть гипотезы, не проверены / есть наблюдения, не прочитаны / есть правило. Дальше работаешь **от этой точки**, а не с нуля.
-3. **Можно ли просто фальсифицировать?** Есть ли **дешёвый, быстрый** эмпирический тест, различающий гипотезы?
-   - **ДА → Mode A (эмпирический цикл).** Иди проверять реальность; не созывай панель, чтобы рационализировать красивую историю.
-   - **НЕТ** (ценность / стратегия / нет дешёвого теста) **→ Mode B (панель суждения).**
-4. **Нужны гипотезы или разные ракурсы?** Панель — это твой **генератор** (гипотез, наблюдений, способов убийства). Вызывай её **внутри** любого режима, когда своих сведений не хватает.
+## Step 0 — Goal gate (Munger's secretary; ALWAYS first)
 
----
+Load goals/constraints from the person's profile (the goals file — `User Context` / `Human Context` / `Practices`, whichever name they use; if there's no profile, ask for the goal and the constraint in one line). Run the topic through three questions: **goal → constraint → necessary conditions.** This seat is led by the **Munger lens** (opportunity cost + inversion + the right to veto with "not worth attention"), with Goldratt beside it (*is this actually the constraint?*) and Gigerenzer (*is it even worth computing?*).
 
-## Mode A — Эмпирический цикл (научный метод)
-Модель: `_core/Models/Scientific Method (Measure Zero).md`. Цикл — **спираль**, не выстрел; приоритет — **скорость и дешевизна** каждого витка.
+- If the topic is **not the current constraint, won't become one soon, and isn't a threatened necessary condition** → say so plainly: *not constraint-relevant → log it + a cheap tripwire, attention = zero* — and **STOP. Do not run the cycle or the panel.** (Escape hatch: cheap to do **and** an irreversible tail → still log + tripwire.)
+- The secretary's main job is to **keep the discussion aligned to the goals and resist the "diligent helper"** — the urge to produce an impressive answer to a question that shouldn't have been asked.
 
-1. **Задача** — измеримый критерий + горизонт (из Step 0.5).
-2. **Гипотезы** — 2–5, каждая как **`если [причина] → [измеримый результат]`**; для каждой сразу **критерий убийства** (что её опровергнет). Начинай **с гипотезы, не со сбора данных**. Выбери вероятнейшую, **запиши почему**. *(Не хватает — созови панель как генератор.)*
-3. **Дедукция → прогноз на один шаг:** «если верно, при X за время T увижу Y (число)». Точный прогноз — только на **один шаг**.
-4. **Наблюдение:** самый **дешёвый** тест, меняй **один фактор**, фиксируй всё, особенно неудобное.
-5. **Фальсифицируй ПЕРВЫМ делом.** Триггер: как только наблюдение в руках — сверь с заранее записанным критерием убийства (*modus tollens: H→P, видишь ¬P ⟹ ¬H*). Проектируй наблюдение как **попытку убийства** (severe test), не подтверждение. Убил → следующая гипотеза; аномалии → отдельно, как супергипотезы.
-6. **Верифицируй** только пережившую несколько убийств → подкрепление, **не доказательство**; серия / шире горизонт → «лучший способ на сегодня».
-7. **Обобщи** в правило + **«что нового узнал → уточнённая модель»** → новый виток.
-- **Anti-patterns** (называй, если проскальзывают): сдвиг рамки после провала, добавление условий, обвинение реальности, confirmation-hunting («сову на глобус»), одиночный анекдот как доказательство, **влюблённость в гипотезу**. Статистика — только чтобы породить/ранжировать гипотезы, инстанс решает практика.
+## Step 0.5 — Locate & route (dispatcher)
+
+Walk these four questions out loud and announce the route:
+
+1. **Is there a task — and is it well posed?** A task supplies the **external criterion of truth** (Tarski — the criterion sits outside the system). Make it measurable: **number + range + horizon** (arbitrary units are fine, as long as it's countable; *if you don't measure, you don't care*). Reformulate vague asks ("I want to sleep better", "I want to know the truth") into something measurable first. If there's no real task → back to Step 0 (log + tripwire, stop).
+2. **Which stage am I at?** Name the point in the cycle: no task / task but no hypotheses / hypotheses but untested / observations but unread / a rule already. Then work **from that point**, not from scratch.
+3. **Can this simply be falsified?** Is there a **cheap, fast** empirical test that discriminates between the hypotheses?
+   - **YES → Mode A (empirical cycle).** Go query reality; don't convene a panel to rationalise a pretty story.
+   - **NO** (values / strategy / no cheap test) **→ Mode B (judgment panel).**
+4. **Do I need hypotheses or different angles?** The panel is your **generator** — of hypotheses, observations, and ways to kill them. Call it **inside** either mode whenever your own material runs short.
 
 ---
 
-## Mode B — Панель суждения (для вопросов без дешёвого теста)
+## Mode A — Empirical cycle (the scientific method)
 
-### B1 — Refine the question first (Шаман / Серкин)
+Model: `Models/Scientific Method (Measure Zero).md`. The cycle is a **spiral, not a single shot**; the priority is **speed and cheapness of each turn**.
+
+1. **Task** — measurable criterion + horizon (from Step 0.5).
+2. **Hypotheses** — 2–5, each stated as **`if [cause] → [measurable result]`**, and each with its **kill criterion** written down immediately (what would refute it). Start **from a hypothesis, not from data collection.** Pick the most probable one and **record why.** *(Short on ideas → convene the panel as a generator.)*
+3. **Deduction → a one-step prediction:** "if this holds, then under X, within time T, I will see Y (a number)." Precise prediction extends **one step only**.
+4. **Observation:** the **cheapest** test that works; change **one factor**; record everything, especially the inconvenient parts.
+5. **Falsify FIRST.** Trigger: the moment an observation is in hand, check it against the kill criterion you wrote in advance (*modus tollens: H→P; you observe ¬P ⟹ ¬H*). Design the observation as an **attempted kill** (a severe test), not a confirmation. Killed → next hypothesis. Anomalies → set aside separately, as candidate super-hypotheses.
+6. **Verify** only what has survived several kill attempts → that is **corroboration, not proof**; a series of them, or a longer horizon → "the best approach available today".
+7. **Generalise** into a rule + **"what did I learn → refined model"** → next turn of the spiral.
+
+- **Anti-patterns** (name them out loud if they creep in): shifting the frame after a failure, stacking extra conditions, blaming reality, confirmation-hunting (forcing the evidence to fit), a single anecdote taken as proof, and **falling in love with the hypothesis**. Statistics are for generating and ranking hypotheses; the individual case is settled by practice.
+
+---
+
+## Mode B — Judgment panel (for questions with no cheap test)
+
+### B1 — Refine the question first
 Do **not** rush to answer. The one who asks already senses the answer — draw it out and sharpen what's truly being asked.
 - Restate the question back, sharper than posed. Strip vagueness; name the implicit goal (what is optimized, against what constraint).
 - Surface hidden assumptions and what would actually change the user's decision.
@@ -50,7 +58,7 @@ Do **not** rush to answer. The one who asks already senses the answer — draw i
 Proceed only once the question is crisp. If genuinely ambiguous, ask one tight clarifying question first.
 
 ### B2 — Select experts (topic **and** meta-topic)
-From `_core/mentor-panel.md`. **Only those who genuinely have something to say** — on the **topic** (domain experts) **and** on the **meta-topic** (the kind of question: decision under uncertainty, systems/strategy, behavior change…). 2–4 total + one **additional** relevant world-expert on the subject **not** on the mentor panel.
+From `mentor-panel.md` (framework root). **Only those who genuinely have something to say** — on the **topic** (domain experts) **and** on the **meta-topic** (the kind of question: decision under uncertainty, systems/strategy, behavior change…). 2–4 total + one **additional** relevant world-expert on the subject **not** on the mentor panel.
 
 ### B3 — Run each expert in a separate thread (parallel)
 Spawn **one sub-agent per expert** (Agent tool), all in a single message → **parallel / independent**. This structurally enforces "independent views before conflict" — experts cannot converge by agreeing in sequence. Each gets the refined question, its lens, and the relevant data files (`Health profile`, `lab.json`, `Practices`, recent `daily/`). Each reasons **only** from its lens, **hypotheses → validate → conclude** (no jumping), and returns its strongest independent take + where it thinks the user is wrong.

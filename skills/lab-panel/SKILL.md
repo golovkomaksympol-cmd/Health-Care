@@ -5,6 +5,8 @@ description: Design a blood-test panel, or interpret one that came back. Use whe
 
 # Lab-panel skill
 
+**Language:** reply in the **user's language**, whatever they wrote in. Keep marker names, units and reference ranges in their standard form (ApoB, HbA1c, hsCRP, HOMA-IR, mg/dl, mmol/l) — translating them invites transcription errors on the one thing that must stay exact. This file is written in English; that is not the output language.
+
 Two jobs, same spine: **assemble a panel** (before) and **read it honestly** (after). The spine is `Decision Principles.md` + `Trigger Diagnostics.md` + `meta-thinking.md` (framework root — `_core/` in a health-repo setup, `../../` from this file standalone).
 
 **The one rule everything else serves:** a test earns its place only if its result would **change an action**. Everything else is anxiety with a co-pay.

@@ -1,11 +1,13 @@
 ---
 name: plan-workout
-description: Generate a strength-training plan for a specific day. Use when the user asks for a workout / gym session ("составь тренировку", "план на сегодня", "что делать в зале", "дай силовую"). Establishes the training goal first, then renders ONE day's session from the weekly skeleton + recent logs + today's readiness, picking from the exercise catalog filtered by gym. Outputs a single loggable session — not a generic plan.
+description: Generate a strength-training plan for a specific day. Use when the user asks for a workout / gym session ("plan my workout", "what should I do at the gym today", "give me a strength session", "составь тренировку", "план на сегодня", "дай силовую"). Establishes the training goal first, then renders ONE day's session from the weekly skeleton + recent logs + today's readiness, picking from the exercise catalog filtered by gym. Outputs a single loggable session — not a generic plan.
 ---
 
 # Plan-workout skill
 
 Render **one day's strength session**: goal first, then the weekly skeleton, balanced against recent history, filtered by gym, adapted to today's readiness. **Pick from the catalog — never invent exercises or improvise off "last time" randomly.**
+
+**Language:** reply in the **user's language**, whatever they wrote in. Keep **exercise names in canonical English** (they must match `Exercise Catalog.md` and the `log` skill's entries), along with training abbreviations (RIR, RPE, 1RM, ROM). This file is written in English; that is not the output language.
 
 **Framework root** = the directory holding `Exercise Catalog.md` and `Models/` — `_core/` in a health-repo setup, or this bundle's root (`../../` from this file) standalone.
 
@@ -94,7 +96,7 @@ Then generate from `Exercise Catalog.md` + `Training Framework.md` alone, and st
 ## Step 6 — Output (loggable — matches skill `log`)
 Group by block (**Warm-up / Power / Strength / Hypertrophy / Core**). Per exercise: `Name — sets × reps, load, @RIR, rest` **+ the exercise's 🎥 link from the Exercise Catalog** so the trainee can review form. Copy the link from the catalog row; don't invent a URL.
 - **First line: the driver** — `Driver: PERFORM (from Practices)` / `(inferred from last 5 sessions)` / `(you told me)`. Then a one-line rationale: which rotation day, what it balances, any readiness adjustment.
-- **Last line: ⚠️ one watch-out**, picked from the Step 0 watch-list because it applies to *this* session — e.g. «эти же упражнения, но жёстче интент — не гоняйся за новыми» or «FEEL-блок: не до отказа, иначе теряешь частоту». One line, concrete, tied to what's actually in the plan. Skip it only if nothing on the list is genuinely at risk today.
+- **Last line: ⚠️ one watch-out**, picked from the Step 0 watch-list because it applies to *this* session — e.g. "same exercises, harder intent — don't go chasing new ones", or "FEEL block: not to failure, or you lose the frequency". One line, concrete, tied to what's actually in the plan, **in the user's language**. Skip it only if nothing on the list is genuinely at risk today.
 - Power slot: prefer a pattern **not** trained recently (broaden the ProPower vector), and one that's practical in the trainee's gym (e.g. no med-ball throws without a wall → use cable rotation / plyo / jumps).
-- End: «после — залогируй (skill `log`); добей 40 г белка в 1–2 ч».
+- End with two reminders, phrased in the user's language: **log the session afterwards** (skill `log`), and **hit the post-session protein target** (default ~40 g within 1–2 h; use the person's own target from `Practices` / `Nutrition Framework.md` if it differs).
 Keep the plan tight; expand reasoning only if asked.
