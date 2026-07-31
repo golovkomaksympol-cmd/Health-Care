@@ -1,85 +1,98 @@
 # Goal-Dictated Selection — Look / Feel / Perform (Andy Galpin)
 
-A **selection and dosing decision-rule**, not a capacity. Answers *"which exercise, at what load and frequency?"* by first forcing the question *"for which outcome?"* Companion to `_core/Models/Training Adaptations (Galpin 9).md` (which axis) and `_core/Models/Core Stability.md` (the trunk capacity itself).
+A **dosing decision-rule**: what you're training *for* fixes the effort-proximity and frequency you must use, and those two cannot be maximised together. Entry point for `plan-workout` — no session is designed before the driver is named.
+
+Not a capacity. The trunk capacity itself is `_core/Models/Core Stability.md`; which adaptation axis you're chasing is `_core/Models/Training Adaptations (Galpin 9).md`.
+
+> **This file has been pruned.** Four claims from the original framework were tested and failed; they are **not** stated as model content and are recorded in Falsification so they don't get re-imported. What remains is what survived.
 
 ## Mechanism
 
-There is **no universally best exercise** — only an exercise matched to a dose profile matched to an outcome. Three outcome classes each impose a *different and partly incompatible* dose:
+One causal chain does all the work:
 
-| Vector | Objective | Selection bias | Load / effort | Frequency | Fatigue cost |
+**proximity to failure → recovery cost → ceiling on frequency**, while **motor-control adaptation requires frequency.**
+
+So effort-proximity and frequency are **inversely coupled**. Any goal that needs near-failure effort is frequency-limited; any goal that needs high frequency must stay far from failure. This is why one prescription cannot serve every goal — not because the goals are incompatible, but because **the dose is**.
+
+Three outcome classes, distinguished by where they sit on that trade-off:
+
+| Vector | What you're buying | Effort proximity | Frequency | Fatigue budget | Selection bias |
 |---|---|---|---|---|---|
-| **LOOK** | hypertrophy, local volume | ~50% compound / 50% isolation | moderate load, **close to failure** | 2–4×/wk | high → needs recovery |
-| **PERFORM** | force transfer, dynamic stability, bracing | ~75% heavy compound / 25% anti-movement | heavy free-weight; max intent | 2–4×/wk, inside the strength/sport split | high |
-| **FEEL** | spinal health, pain, posture, motor control | ~80% isolated/controlled / 20% compound | **low load, submaximal** | high — up to daily | near-zero by design |
+| **LOOK** | muscle size / local volume | **close to failure** | recovery-capped | high | compound + isolation; isolation carries more weight here than elsewhere |
+| **PERFORM** | force transfer, bracing, dynamic stability | high **intent**, not to failure | recovery-capped, inside the strength/sport split | high | heavy free-weight compound + anti-movement |
+| **FEEL** | positional control, motor competence | **deliberately submaximal** | high, up to daily | near-zero *by design* | controlled / isolated, low load |
 
-The causal chain that makes them conflict: **proximity-to-failure buys hypertrophy but costs recovery; recovery cost caps frequency; motor control needs frequency.** So the *same* prescription cannot maximise all three — LOOK's near-failure effort and FEEL's daily low-fatigue requirement are opposite ends of one axis.
+Deliberately no ratio percentages or rep brackets — see Falsification #2 and #3.
 
-**Corollary (the sharper claim):** *how hard you contract and brace under load* dominates *which exercise you picked*. Novelty is a low-yield lever; intent is a high-yield one.
+**Second mechanism, independent of the above:** *how hard you contract and brace under load* moves the outcome more than *which exercise you chose*. Effort spent hunting novel exercises is misallocated; effort spent on intent within a known exercise is not.
 
-### The 5-step loading ladder
+### The loading ladder
 
-Within a chosen vector, progress a pattern through risk-graded stages rather than jumping to load:
+Sequences a pattern from control toward load. Enter at the step you can own with quality, not the step that looks impressive.
 
 | Step | Stage | Example |
 |---|---|---|
-| 1 | **Isometric control** — static hold, no load | plank 45–60 s |
-| 2 | **Anti-movement + fatigue** — high-rep bodyweight, resist motion | 20–30 slow dead bugs |
-| 3 | **Anti-movement + load** — resist motion against resistance | weighted suitcase carry, DB dead bug |
-| 4 | **Movement + fatigue** — dynamic, light, high-rep | high-rep cable crunch, contraction-focused |
-| 5 | **Movement + load** — heavy dynamic through full ROM | weighted crunch 5–8 |
+| 1 | **Isometric control** — static hold, no load | plank |
+| 2 | **Anti-movement + fatigue** — high-rep bodyweight, resist motion | slow dead bugs |
+| 3 | **Anti-movement + load** — resist motion against resistance | suitcase carry, DB dead bug |
+| 4 | **Movement + fatigue** — dynamic, light, high-rep | cable crunch, contraction-focused |
+| 5 | **Movement + load** — heavy dynamic through full ROM | weighted crunch |
 
-Steps 1–3 are the FEEL/PERFORM end (control, bracing); 4–5 are the LOOK end (tension, volume).
+Steps 1–3 sit at the FEEL/PERFORM end (control, bracing); 4–5 at the LOOK end (tension, volume). This is a **sequencing heuristic for load tolerance and quality**, not an injury-prevention protocol (Falsification #4).
 
 ## Scale of simplicity
 
-The complex object is "hundreds of exercises × load × frequency × individual." This model coarse-grains to **one categorical question — which of three outcome classes is the primary driver? — and reads off a dose *class*.** The simplifying move is refusing to reason at the level of the individual exercise: the model sets *effort-proximity, frequency and fatigue budget*, and the exercise is then interchangeable within its pattern (this is exactly why `Exercise Catalog.md` swaps by pattern + adaptation, not by name).
+The complex object is "hundreds of exercises × load × frequency × individual." This model coarse-grains to **one categorical question — which outcome class is the primary driver? — and returns a dose *class*, not an exercise.** The simplifying move is refusing to reason about the individual movement: fix effort-proximity, frequency and fatigue budget, and the exercise becomes interchangeable within its pattern (exactly why `Exercise Catalog.md` swaps by pattern + adaptation rather than by name).
 
-**Usefulness test:** the payoff exists only when a **single primary driver is actually named**. Refuse to pick one and the model returns nothing — it relabels the choice instead of collapsing it. It also stops paying off *below* its scale: it cannot tell you 50/50 vs 60/40, or which of two isolation exercises. Use it to set the dose class; don't ask it to select the movement.
+**Usefulness test:** the payoff exists **only when one primary driver is actually named.** Decline to pick, and the model returns nothing — it relabels the choice instead of collapsing it. It also stops paying off below its scale: it cannot choose between two isolation exercises, or set a precise ratio. Use it for the dose class; use the catalog for the movement.
 
 ## Cynefin domain
 
-- **Mechanism — Complicated.** Dose → adaptation is ordered and well-mapped for LOOK and PERFORM (SAID; effort/volume→hypertrophy; heavy compound→force transfer). Motor control is likewise trainable and testable. An expert can prescribe reliably.
-- **Outcome — Complex.** Whether this program makes *this* person look how they want, or resolves *their* back pain, is emergent: it competes with total energy balance, sleep, stress, prior injury, psychosocial factors, and natural history. **Do not lend the dose-response confidence to the pain or aesthetics outcome** — this is where the framework is most often oversold (see Falsification).
+- **Mechanism — Complicated.** The trade-off is mechanical and derivable: near-failure work costs recovery, recovery caps frequency, control needs frequency. Predictable and repeatable.
+- **Outcome — Complex.** Whether a block makes *this* person look how they want, or feel better, is emergent — it competes with energy balance, sleep, stress, prior injury, natural history. **Never lend the trade-off's confidence to the outcome.** This is precisely where the original framework overreached.
 
 ## Time horizon (Lyapunov)
 
-- **Dose → adaptation: weeks → a few months.** Predictable window; program and forecast here (hypertrophy at 8–12 wk, control/endurance test scores at 4–8 wk).
-- **Beyond a training block**, and for the pain/aesthetics *outcome* at any horizon → prediction decays. **Stop forecasting, instrument:** re-test the vector's own metric (girth/photos for LOOK; Sahrmann level + McGill endurance for FEEL; carry load, jump, 1RM for PERFORM) on a fixed cadence and steer off measurements.
+- **Dose → adaptation: weeks → a few months.** Predictable; program here.
+- **Beyond a block, and for any *outcome* claim at any horizon** → prediction decays. **Stop forecasting, instrument:** re-test each vector on its own metric (LOOK: girth/photos at fixed conditions · PERFORM: 1RM, carry load, jump · FEEL: Sahrmann level, McGill endurance seconds and ratios) on a fixed cadence and steer off measurements.
 
 ## Practice
 
-1. **Name the primary driver before selecting anything.** One vector leads per body region per block. Write it down; it dictates load, reps, frequency and fatigue budget.
-2. **Secondary vectors get a maintenance dose, not a competing one.** FEEL's fatigue cost is near-zero — it can run daily *alongside* LOOK or PERFORM, provided it stays submaximal. Never chase FEEL work to failure; that converts it into LOOK work and destroys its frequency.
-3. **Apply the ladder.** Enter at the step you can own with quality, not the one that looks impressive. Earn step 5.
-4. **Spend the effort on contraction intensity, not novelty.** Same exercise, more intent, beats a new exercise.
-5. **Diagnose a stalled program by mismatch:** daily near-failure ab work (LOOK dose at FEEL frequency) → burnout and no result. Weekly low-load dead bugs (FEEL dose at LOOK frequency) → no adaptation of anything.
+1. **Name the primary driver before selecting anything.** One driver leads per region per block. It sets effort-proximity, frequency and fatigue budget. If it isn't known, establishing it is the first task — not an optional preamble.
+2. **Secondary vectors get a maintenance dose, not a competing one.** FEEL costs almost no fatigue, so it can run daily *alongside* LOOK or PERFORM — provided it stays submaximal.
+3. **Never take FEEL work near failure.** That converts it into LOOK work and destroys the frequency that makes it work. This is the single most common error the model exists to catch.
+4. **Enter the ladder where quality holds.** Earn the loaded steps.
+5. **Spend effort on contraction intensity, not novelty.** Same exercise, more intent, beats a new exercise.
+6. **Diagnose a stalled program as dose-mismatch first:** daily near-failure work (LOOK dose at FEEL frequency) → accumulating fatigue, no result. Weekly low-load control work (FEEL dose at LOOK frequency) → no adaptation of anything.
 
 ## Confidence
 
-- **High** that dose profiles differ by outcome and that near-failure-effort vs high-frequency-low-fatigue is a genuine trade-off.
-- **Medium** that the three-bucket taxonomy is the right carve-up (it's a useful heuristic, not a measured partition).
-- **Low** on the specific numbers — the 50/50, 75/25, 80/20 splits and the 6–12 rep bracket are **expert heuristics, not empirically derived**. Treat as starting points.
-- **Low** that the ladder's ordering "protects joints" — plausible, unevidenced.
+- **High** that effort-proximity and frequency are inversely coupled, and that this forbids one dose serving every goal.
+- **High** that FEEL-class work must stay submaximal to keep its frequency.
+- **Medium** that three buckets are the right carve-up — a useful partition, not a measured one.
+- **Medium** on the ladder's ordering as a quality/tolerance progression (mechanically sensible, not trialled).
+
+Nothing in this file rests on a claim graded low — the low-confidence material was removed rather than hedged.
 
 ## Falsification
 
-**Strongest predictions if the model holds:** (a) matching dose to goal beats mismatching; (b) the goals genuinely conflict; (c) FEEL-class work reduces low back pain; (d) hypertrophy needs 6–12 reps near failure; (e) the ladder protects joints.
+**Prediction if the surviving model holds:** programs that apply one dose profile across incompatible goals underperform matched programs that dose each separately — and specifically, control work driven to failure loses its benefit by losing its frequency.
 
-**Attempt 1 — does FEEL work actually fix back pain?** This is the same attack that already qualified `Core Stability.md`, and it lands again. Saragiotto et al. (Cochrane 2016) find **motor-control exercise probably no better than other forms of exercise** for chronic LBP; Smith et al. (2014, *BMC Musculoskelet Disord*) find core-stability exercise ≈ general exercise beyond the short term; Lederman's *"The myth of core stability"* attacks the isolation premise directly. **Confound:** most back-pain episodes resolve on their own — regression to the mean plus the general activity/consistency of people who do daily drills would produce the same pattern. → **Claim (c) fails as stated.** It survives only in the weak form: low-load daily control work is a *low-risk, near-zero-fatigue* way to train control that is **at least as good as** the alternatives — not a specific cure.
+Four claims from the source framework were tested and **removed**:
 
-**Attempt 2 — do the goals really conflict?** Partly self-refuting. FEEL's fatigue cost is near-zero *by the model's own description*, so it should NOT meaningfully interfere with LOOK or PERFORM — and concurrent-training interference is modest between strength and hypertrophy, which overlap heavily. → **Claim (b) is over-stated.** Narrowed: a *single exercise prescription* cannot serve all three, but all three can coexist in one program when each gets its own dose. "Pick one primary driver" is about **not applying one dose to every goal**, not about abstaining from two of them.
+1. **"FEEL work reduces low back pain" — failed, removed.** Cochrane (Saragiotto et al. 2016): motor-control exercise **no better than other exercise** for chronic LBP; Smith et al. 2014 concurs; Lederman attacks the isolation premise. **Confound:** most back-pain episodes resolve regardless, so natural history plus the general activity level of people who do daily drills reproduces the pattern. The model now claims only a *trainable capacity* (positional control), never a pain outcome.
+2. **Fixed selection ratios (50/50, 75/25, 80/20) — removed as unevidenced.** Expert heuristic; no trial compares 50/50 against 60/40. Replaced by directional "selection bias".
+3. **"6–12 reps near failure required for hypertrophy" — failed, removed.** Hypertrophy spans roughly 5–30+ reps when effort is equated; **volume is the driver, load is largely permissive** (Schoenfeld et al.). Replaced by effort-proximity, which is the variable that actually carries the mechanism.
+4. **"The ladder protects joints" — unevidenced, removed.** No trial shows step-gating lowers injury risk versus starting light-but-loaded. Retained only as a quality/tolerance sequence.
 
-**Attempt 3 — is 6–12 reps near failure required for hypertrophy?** No. Meta-analytic work (Schoenfeld and colleagues) shows hypertrophy across roughly 5–30+ reps when effort/proximity-to-failure is equated, with **volume as the primary driver and load largely permissive**. → **Claim (d) fails.** Corrected in the table's spirit: moderate loads are *convenient*, not necessary.
+**Surviving attack, and the honest answer.** The strongest remaining objection is that *"train according to your goal"* is close to tautological, and a tautology is not a model. The rebuttal is that the falsifiable content sits in the **mechanism** (effort-proximity ↔ frequency coupling) and its **prohibition** (Practice §3): the model forbids a specific, popular, concrete behaviour — daily near-failure core work — and that prohibition can be wrong. If control work driven to failure at reduced frequency produced equal control adaptation, the mechanism would be false. It hasn't been tested head-to-head. ❓ **This is the model's weakest joint and the obvious experiment.**
 
-**Attempt 4 — is this just a tautology?** "Train for what you want" is unfalsifiable. The model's testable content lives entirely in the specific dose profiles — and those are heuristic (see Confidence). → the framework's *value* is as a **forcing function against dose-mismatch**, not as a validated dose table.
-
-**Verdict — survives, substantially narrowed.** What survives is the decision-rule: **effort-proximity and frequency trade off against each other, so name the primary driver and dose accordingly; the commonest programming error is applying one dose profile to an incompatible goal.** What did not survive: the pain-cure claim (Attempt 1), the strong conflict claim (2), the rep-bracket requirement (3), and the joint-protection claim of the ladder (unevidenced). Kept because the diagnostic use in Practice §5 is real and the failure mode it catches is common.
+**Verdict — survives, materially narrowed.** After pruning it is a smaller, mechanically-grounded dosing rule rather than a programming framework. Re-checked against the gate: it drives a practice (the goal gate + the prohibition), it is universal, and it remains non-obvious *because* the prohibition contradicts common gym practice. Kept.
 
 ## Boundaries & doubts
 
-- **The three buckets are a heuristic partition, not a measured one.** FEEL is not one of Galpin's 9 adaptations at all (`Core Stability.md` notes it is not a Galpin adaptation) — this framework and the 9-axis model carve the space differently and should not be mechanically merged.
-- **All ratios and rep brackets are expert judgement.** No trial compares 50/50 against 60/40 isolation ratios.
-- **Says nothing about energy balance** — the dominant term for the LOOK outcome (visible definition) is body-fat, which this model does not address at all.
-- **Weakest in acute pathology.** With a disc injury, fracture, or radiculopathy, structure dominates and diagnosis outranks any dose framework (same edge as `Core Stability.md`).
-- **The ladder's step-gating is unvalidated** — no evidence that mastering step 1 before step 3 lowers injury risk versus starting light-but-loaded.
-- ❓ Whether the near-zero fatigue cost of FEEL work truly holds at high frequency in a hard-training person, or whether it accumulates enough to matter, is unresolved.
+- **The three buckets are a heuristic partition, not a measured one.** FEEL is not one of Galpin's 9 adaptations — this model and the 9-axis model carve the space differently and must not be mechanically merged.
+- **Says nothing about energy balance** — the dominant term for the visible LOOK outcome is body fat, which this model does not address.
+- **Weakest in acute pathology.** With disc injury, fracture or radiculopathy, structure dominates and diagnosis outranks any dosing rule (same edge as `Core Stability.md`).
+- ❓ Whether FEEL work's near-zero fatigue cost truly holds at daily frequency in someone already training hard, or quietly accumulates.
+- ❓ The head-to-head test in Falsification has not been run; the central prohibition is mechanically reasoned, not demonstrated.

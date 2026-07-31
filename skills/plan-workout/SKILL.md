@@ -1,22 +1,46 @@
 ---
 name: plan-workout
-description: Generate a strength-training plan for a specific day. Use when the user asks for a workout / gym session ("составь тренировку", "план на сегодня", "что делать в зале", "дай силовую"). Renders ONE day's session from the weekly skeleton + recent logs + today's readiness, picking from the exercise catalog filtered by gym. Outputs a single loggable session — not a generic plan.
+description: Generate a strength-training plan for a specific day. Use when the user asks for a workout / gym session ("составь тренировку", "план на сегодня", "что делать в зале", "дай силовую"). Establishes the training goal first, then renders ONE day's session from the weekly skeleton + recent logs + today's readiness, picking from the exercise catalog filtered by gym. Outputs a single loggable session — not a generic plan.
 ---
 
 # Plan-workout skill
 
-Render **one day's strength session** from the weekly skeleton, balanced against recent history, filtered by gym, adapted to today's readiness. **Pick from the catalog — never invent exercises or improvise off "last time" randomly.**
+Render **one day's strength session**: goal first, then the weekly skeleton, balanced against recent history, filtered by gym, adapted to today's readiness. **Pick from the catalog — never invent exercises or improvise off "last time" randomly.**
 
-## Step 1 — Inputs (ask only what's missing)
+**Framework root** = the directory holding `Exercise Catalog.md` and `Models/` — `_core/` in a health-repo setup, or this bundle's root (`../../` from this file) standalone.
+
+## Step 0 — Goal gate (ALWAYS FIRST, never skip)
+
+Model: `Models/Goal-Dictated Selection (Look, Feel, Perform).md`. **A session is not designable until the primary driver is named**, because the driver — not the exercise list — sets effort-proximity, frequency and fatigue budget. Getting this wrong is the failure this gate exists to prevent.
+
+**Establish the driver in this order:**
+1. **Read it** from `<Person>/Practices` (weekly plan / goals section) or `<Person>/Health profile`. If a current block goal is documented, use it and **say which one you're using in one line**.
+2. **Infer it** from the last ~5 sessions in `<Person>/daily/` if the pattern is unambiguous (e.g. consistently heavy compounds at low reps → PERFORM). State the inference and that you inferred it.
+3. **Ask** if neither is available. One short question, offered as a choice — do not guess silently:
+
+> "What's this block for — **LOOK** (size), **PERFORM** (strength / force transfer / sport), or **FEEL** (control, spinal health, low-load daily)?"
+
+**The driver then binds the whole session:**
+
+| Driver | Effort proximity | Session shape | Fatigue budget |
+|---|---|---|---|
+| **LOOK** | work close to failure on the target | more isolation volume, more sets per muscle | high — needs recovery days |
+| **PERFORM** | high **intent**, *not* to failure | Power + heavy compounds lead; anti-movement core | high — recovery-capped |
+| **FEEL** | **deliberately submaximal** | controlled, low-load, quality reps; can repeat daily | near-zero *by design* |
+
+**Two hard rules from the model:**
+- **Never program FEEL work near failure.** It converts it into LOOK work and destroys the frequency that makes it work.
+- **One driver leads; others get a maintenance dose, not a competing one.** FEEL costs almost no fatigue and can run alongside either of the others.
+
+If the request itself conflicts with the stated driver (e.g. "give me a brutal ab session" under a FEEL block), **say so and offer both options** rather than quietly serving the request.
+
+## Step 1 — Inputs (ask only what's still missing)
 - **Gym / equipment available** → equipment filter. Use the person's gym list if there is one; otherwise ask which gym or what kit they have.
 - **Time** (45 / 60 / 90 min) → volume / number of exercises.
 - **Readiness**: sleep/HRV, soreness, injuries, illness, energy. If clearly fine → proceed; if low → deload (Step 4).
 - Rotation day (A/B/C) and focus are **auto-selected** from recent logs unless the user names one.
 
 ## Step 2 — Read first (sources)
-
-**Framework root** = the directory holding `Exercise Catalog.md` and `Models/` — i.e. `_core/` in a health-repo setup, or this bundle's root (`../../` from this file) when installed standalone.
-
 1. `<Person>/Practices` → the weekly plan section — session order, A/B/C rotation, rules, priorities.
 2. `Exercise Catalog.md` (framework root) — the pick-list; respect tags/flags.
 3. `<Person>/gyms.md` — filter to the chosen gym; if a needed item is `✗`/`?` → swap for same **pattern + adaptation**.
@@ -24,7 +48,7 @@ Render **one day's strength session** from the weekly skeleton, balanced against
 5. `<Person>/Health profile` — current injuries/illness + constraints.
 
 ### If there is no person folder (standalone / first-time use)
-Sources 1, 3, 4, 5 won't exist. **Don't fail and don't invent history** — ask for the minimum instead, in one short block:
+Sources 1, 3, 4, 5 won't exist. **Don't fail and don't invent history** — ask for the minimum in one short block, together with the Step 0 goal question:
 - training days/week + which split (or offer a default A/B/C full-body rotation from `Training Framework.md`),
 - equipment available,
 - any injuries / medical constraints / movements to avoid,
@@ -32,28 +56,30 @@ Sources 1, 3, 4, 5 won't exist. **Don't fail and don't invent history** — ask 
 
 Then generate from `Exercise Catalog.md` + `Training Framework.md` alone, and state plainly that loads are **starting estimates** to be logged and corrected next time.
 
-## Step 3 — Assemble (per §2.6)
+## Step 3 — Assemble (driver-weighted)
 1. **Pick rotation day (A/B/C)** = least-recently done / restores weekly coverage. Avoid heavy same-muscle/pattern back-to-back vs the last session.
-2. **Order:** warm-up + glute activation → **Power** (1 explosive, 3–5×1–5, fresh, max intent, **not to failure**) → **Strength** (≤3 heavy compounds **3×5**, RIR 1–2; consecutive heavies must NOT share muscle/grip) → **Hypertrophy / patches** (8–15 reps on under-covered patterns + weak links) → **Core / carry** (+ Alfredson if due).
+2. **Order:** warm-up + activation → **Power** (1 explosive, 3–5×1–5, fresh, max intent, **not to failure**) → **Strength** (≤3 heavy compounds, RIR 1–2; consecutive heavies must NOT share muscle/grip) → **Hypertrophy / patches** (under-covered patterns + weak links) → **Core / carry** (+ any rehab protocol due).
+   - **Weight the blocks by the Step 0 driver:** PERFORM → Power/Strength get the volume, hypertrophy trimmed. LOOK → trim Power, expand hypertrophy sets and isolation, push proximity to failure on the target. FEEL → drop Power and heavy compounds entirely; the session *is* controlled low-load work and may be short and repeatable.
 3. **Equipment filter:** include an exercise only if its `Equip` is available at the chosen gym; otherwise swap (same pattern/adaptation).
-   - **Core block — dose by goal, don't default to failure.** Spinal-health/control work is low-load, submaximal, high-frequency; taking it near failure converts it into hypertrophy work and kills the frequency that makes it work. See `Models/Goal-Dictated Selection (Look, Feel, Perform).md` (incl. the 5-step loading ladder).
-4. **Coverage & patches:** check the week — fill under-trained patterns + **the person's own weak links as recorded in their `Health profile` / `Practices`** (typical classes: a rehab-flagged tendon, a lagging single-joint muscle, a side-to-side asymmetry, timing/activation faults). Don't assume weak links that aren't documented.
-5. **Load:** pull the **last weight** from logs; **+ a small step if last set's RIR was easy**, hold/reduce if it was a grind. State the number.
-6. **Time → volume:** 45 min ≈ Power + 2 strength + 1–2 patches + short core; 60–90 → add back-off sets / accessories / carries.
+4. **Loading ladder for any new or rehab pattern:** enter at the step whose quality the person can own — isometric → anti-movement+fatigue → anti-movement+load → movement+fatigue → movement+load. Don't jump to loaded movement to look impressive.
+5. **Coverage & patches:** check the week — fill under-trained patterns + **the person's own weak links as recorded in their `Health profile` / `Practices`** (typical classes: a rehab-flagged tendon, a lagging single-joint muscle, a side-to-side asymmetry, timing/activation faults). Don't assume weak links that aren't documented.
+6. **Load:** pull the **last weight** from logs; **+ a small step if last set's RIR was easy**, hold/reduce if it was a grind. State the number.
+7. **Time → volume:** 45 min ≈ Power + 2 strength + 1–2 patches + short core; 60–90 → add back-off sets / accessories / carries.
+8. **Cue intent over novelty:** prefer a known exercise executed with more deliberate contraction/bracing over a novel one. Don't rotate exercises for variety's sake.
 
 ## Step 4 — Readiness adaptation
-- **Low HRV / post-illness / poor sleep / notable soreness → DELOAD:** drop Power + heavy 3×5; keep light full-range work + core/mobility, or skip. (Post-febrile: no intense work until HRV recovers.)
+- **Low HRV / post-illness / poor sleep / notable soreness → DELOAD:** drop Power + heavy work; keep light full-range work + core/mobility, or skip. (Post-febrile: no intense work until HRV recovers.) Note that a deload day is a natural FEEL-dose day.
 - **Flagged injury** → don't load it; swap (e.g. calf flare → no jumps / no toe-loaded carries).
 
 ## Step 5 — Constraints (always honor)
-- **Read the person's documented constraints and honor every one** — they override any default here. Map each to a rule, e.g.: *joint hypermobility / instability* → neutral spine, stability before load, `spine⚠` items controlled rather than ground out; *tendinopathy* → no fast eccentrics or plyo on that tendon, keep the loading protocol; *hypertension / cardiac flag* → no breath-holding or maximal straining.
+- **Read the person's documented constraints and honor every one** — they override any default here, and any driver. Map each to a rule, e.g.: *joint hypermobility / instability* → neutral spine, stability before load, `spine⚠` items controlled rather than ground out; *tendinopathy* → no fast eccentrics or plyo on that tendon, keep the loading protocol; *hypertension / cardiac flag* → no breath-holding or maximal straining.
 - **Don't stack a NEW eccentric/novel stimulus** on top of another (CK spike / injury risk).
 - **Power first, never to failure.** Strength quality over chasing PRs on bad days.
 - If a constraint and the plan conflict, the constraint wins — say which exercise you swapped and why.
 
 ## Step 6 — Output (loggable — matches skill `log`)
-Group by block (**Warm-up / Power / Strength / Hypertrophy / Core**). Per exercise: `Name — sets × reps, load, @RIR, rest` **+ the exercise's 🎥 link from the Exercise Catalog** (the DeltaBolic channel-search URL) so the trainee can review form. Copy the link from the catalog row; don't invent a URL.
-- One-line top rationale: which rotation day, what it balances, any readiness adjustment.
+Group by block (**Warm-up / Power / Strength / Hypertrophy / Core**). Per exercise: `Name — sets × reps, load, @RIR, rest` **+ the exercise's 🎥 link from the Exercise Catalog** so the trainee can review form. Copy the link from the catalog row; don't invent a URL.
+- **First line: the driver** — `Driver: PERFORM (from Practices)` / `(inferred from last 5 sessions)` / `(you told me)`. Then a one-line rationale: which rotation day, what it balances, any readiness adjustment.
 - Power slot: prefer a pattern **not** trained recently (broaden the ProPower vector), and one that's practical in the trainee's gym (e.g. no med-ball throws without a wall → use cable rotation / plyo / jumps).
 - End: «после — залогируй (skill `log`); добей 40 г белка в 1–2 ч».
 Keep the plan tight; expand reasoning only if asked.
