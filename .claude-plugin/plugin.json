@@ -1,0 +1,13 @@
+{
+  "name": "health-os",
+  "description": "Health reasoning skills: design and interpret lab panels, plan strength sessions, route serious questions through an empirical cycle or an adversarial expert panel, log activity, and write falsifiable mechanistic models.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Andriy Samilyak",
+    "url": "https://github.com/werdan"
+  },
+  "homepage": "https://github.com/werdan/health-os",
+  "repository": "https://github.com/werdan/health-os",
+  "license": "MIT",
+  "keywords": ["health", "longevity", "labs", "training", "decision-making"]
+}
