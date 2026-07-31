@@ -5,7 +5,7 @@ description: Record an activity into the person's daily journal (training, run, 
 
 # Logging skill (Tier 0)
 
-Record what the user did into the person's daily journal. Keep the reply **short**: confirm and show what was written. **No analysis** unless the user explicitly asks (then → skill `deep-think`). See root `CLAUDE.md` (Intent routing).
+Record what the user did into the person's daily journal. Keep the reply **short**: confirm and show what was written. **No analysis** unless the user explicitly asks (then → skill `deep-think`). If the project defines intent routing (e.g. a root `CLAUDE.md`), follow it.
 
 ## Output contract
 - Show the recorded lines so the user sees exactly what went in.
@@ -36,4 +36,4 @@ Activity headers: **use the person's existing headers verbatim** — open the mo
 - **Blood pressure / pulse**: log ONLY into the person's `lab.json` as longitudinal metrics (systolic / diastolic / resting pulse — **reuse the exact metric names already in that file**), not the daily file. Brief ack only.
 - **Meditation**: store the user's words **verbatim** in the daily file (personal diary — no summarizing, no rephrasing). In the **reply**, do NOT echo the verbatim text — just acknowledge (e.g. «записал твои наблюдения»). If the person's profile defines a reflection persona (e.g. a meditation-teacher synthesis), produce that reflection — it is the **one expansive exception** to Tier 0.
 
-Person-specific details (food_refs, default ingredients, reflection persona, BP cadence) live in the person's `CLAUDE.md`.
+Person-specific details (food_refs, default ingredients, reflection persona, BP cadence) live in that person's own config/profile file if they have one — otherwise use the defaults above.
