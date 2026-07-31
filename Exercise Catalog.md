@@ -7,25 +7,27 @@ Pick-list for the `plan-workout` skill. The agent **selects from here** (filtere
 - **Equip:** BB=barbell · DB=dumbbell · KB=kettlebell · trap=trap-bar · mini=mini/EZ-bar · cable · mach=machine · BW=bodyweight · band · box · bench · rack · med=med-ball · wall
 - **Flags:** `U`=unilateral · `spine⚠`=loaded spine → neutral/control (hypermobility) · `calf`=loads calf/Achilles · `ecc`=eccentric/CK-heavy (novel-load caution) · `skill`=high technique · `wall`=needs wall/partner/space to throw (impractical in a standard commercial gym)
 - **Fam** (familiar) = already in **your** current repertoire → lower skill/injury risk than a novel movement. Mark these yourself with `✓`; the planner prefers them when readiness is low or a novel stimulus would stack risk. An empty column is fine — it just means "nothing marked yet".
-- **🎥** = search this exercise on the **DeltaBolic** channel (`youtube.com/@DeltaBolic`). NOTE: DeltaBolic is a hypertrophy/technique channel — strength/isolation/standard lifts are well covered; **power/plyometric moves (jumps, swings, throws, bounds) likely have no DeltaBolic clip → the search may be empty**, use a general YouTube search then.
+- **🎥** = form reference. **Being migrated from channel-searches to direct clips** — a `youtube.com/shorts/…` or `watch?v=…` link is a curated video for that exact movement; a `@DeltaBolic/search?query=…` link is still a fallback search and **may return nothing** (especially for power/plyometric moves — jumps, swings, throws, bounds — which that channel doesn't cover). Use a general YouTube search when a fallback comes up empty.
+- **One row = one movement = one video.** Don't merge two exercises into a row with a slash; give each its own row. A parenthetical is an alias for the *same* movement (e.g. `Plyo Push-up (clap)`), not a second exercise.
 
 > In-gym adaptations: Str, Pow, Hyp, ME, Stab. **Trained OUTSIDE the gym (not here):** VO₂max/Zone 5 (Norwegian), Zone 2 / long-duration (run), skill/gait (running technique), dance. See `Practices`.
 
 ## Squat (knee-dominant)
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
 |---|---|---|---|---|---|---|
-| Back Squat | quads, glutes, trunk | Str/Hyp | BB, rack | spine⚠ | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=back+squat) |
-| Front Squat | quads, trunk | Str/Hyp | BB, rack | spine⚠, skill | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=front+squat) |
-| Goblet Squat | quads, glutes | Hyp/ME | DB/KB | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=goblet+squat) |
-| Hack Squat | quads | Str/Hyp | mach | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=hack+squat) |
-| Leg Press | quads, glutes | Str/Hyp | mach | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=leg+press) |
-| Leg Extension | quads (isolation) | Hyp | mach | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=leg+extension) |
+| Back Squat | quads, glutes, trunk | Str/Hyp | BB, rack | spine⚠ | | [🎥](https://www.youtube.com/shorts/tNUq6b5t11Q) |
+| Front Squat | quads, trunk | Str/Hyp | BB, rack | spine⚠, skill | ✓ | [🎥](https://www.youtube.com/shorts/_qv0m3tPd3s) |
+| Goblet Squat | quads, glutes | Hyp/ME | DB/KB | | ✓ | [🎥](https://www.youtube.com/shorts/ZBAd1g1z6qs) |
+| Hack Squat | quads | Str/Hyp | mach | | ✓ | [🎥](https://www.youtube.com/shorts/cFGgMO-ENiQ) |
+| Leg Press | quads, glutes | Str/Hyp | mach | | ✓ | [🎥](https://www.youtube.com/shorts/EotSw18oR9w) |
+| Leg Extension | quads (isolation) | Hyp | mach | | ✓ | [🎥](https://www.youtube.com/shorts/iQ92TuvBqRo) |
 
 ## Hinge (hip-dominant)
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
 |---|---|---|---|---|---|---|
 | Romanian Deadlift | hamstrings, glutes, erectors | Str/Hyp | BB/DB | spine⚠, ecc | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=romanian+deadlift) |
-| Conventional / Trap-bar Deadlift | post chain, quads | Str | BB/trap, rack | spine⚠ | ✓(hex) | [🎥](https://www.youtube.com/@DeltaBolic/search?query=trap+bar+deadlift) |
+| Conventional Deadlift | post chain, quads | Str | BB, rack | spine⚠ | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=conventional+deadlift) |
+| Trap-bar Deadlift | post chain, quads | Str | trap | spine⚠ | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=trap+bar+deadlift) |
 | Single-leg RDL | hamstring, glute, balance | Hyp/Stab | DB/KB | U, ecc | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=single+leg+rdl) |
 | 45° Back Extension | erectors, glutes, hams | Hyp/ME | mach/+plate | spine⚠ | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=back+extension) |
 | Leg Curl | hamstrings (knee flexion) | Hyp | mach | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=leg+curl) |
@@ -33,12 +35,14 @@ Pick-list for the `plan-workout` skill. The agent **selects from here** (filtere
 ## Hip extension / glute (patterning)
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
 |---|---|---|---|---|---|---|
-| Machine Hip Thrust / Glute Drive | glute max | Str/Hyp | mach | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=hip+thrust) |
+| Machine Hip Thrust (Glute Drive) | glute max | Str/Hyp | mach | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=hip+thrust) |
 | Single-leg Glute Bridge | glute max (timing) | Stab/Hyp | BW/band | U | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=single+leg+glute+bridge) |
 | Banded Glute Bridge | glute activation | Stab/activation | band | | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=banded+glute+bridge) |
-| Clamshell / Lateral Band Walk | glute med (pelvic stab) | Stab/activation | band | | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=clamshell+lateral+band+walk) |
+| Clamshell | glute med (pelvic stab) | Stab/activation | band | | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=clamshell) |
+| Lateral Band Walk | glute med (pelvic stab) | Stab/activation | band | | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=lateral+band+walk) |
 | Cable Glute Kickback | glute max | Hyp | cable | U | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=cable+glute+kickback) |
-| Hip Abduction / Adduction | glute med / adductors | Hyp | mach | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=hip+abduction+machine) |
+| Hip Abduction | glute med | Hyp | mach | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=hip+abduction+machine) |
+| Hip Adduction | adductors | Hyp | mach | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=hip+adduction+machine) |
 | Step-up | glute, quad, drive | Str/Hyp | DB/box | U, calf | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=step+up) |
 | Hip Airplane | glute + rotational stability | Stab | BW | U, skill | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=hip+airplane) |
 
@@ -68,13 +72,15 @@ Pick-list for the `plan-workout` skill. The agent **selects from here** (filtere
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
 |---|---|---|---|---|---|---|
 | Barbell Bent-Over Row | lats, rhomboids, erectors | Str/Hyp | BB | spine⚠ | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=barbell+row) |
-| Dual Pulley / Seated Cable Row | lats, mid-back | Str/Hyp | cable/mach | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=seated+cable+row) |
-| Chest-supported / Machine Row | mid-back (no spine load) | Hyp | mach | | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=chest+supported+row) |
+| Seated Cable Row | lats, mid-back | Str/Hyp | cable/mach | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=seated+cable+row) |
+| Dual Pulley Row | lats, mid-back | Str/Hyp | cable | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=dual+pulley+row) |
+| Chest-supported Row (machine) | mid-back (no spine load) | Hyp | mach | | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=chest+supported+row) |
 
 ## Vertical pull
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
 |---|---|---|---|---|---|---|
-| Pull-up / Weighted Pull-up | lats, biceps | Str/Hyp | BW/+weight, bar | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=weighted+pull+up) |
+| Pull-up | lats, biceps | Str/Hyp | BW, bar | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=pull+up) |
+| Weighted Pull-up | lats, biceps | Str | +weight, bar | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=weighted+pull+up) |
 | Lat Pulldown | lats | Hyp/Str | cable/mach | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=lat+pulldown) |
 
 ---
@@ -100,7 +106,7 @@ Sub-grouped by ProPower pattern. **Transfer is narrow — train the pattern you 
 ### Horizontal push
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
 |---|---|---|---|---|---|---|
-| Plyo / Clap Push-up | explosive horizontal push | Pow | BW | | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=plyo+push+up) |
+| Plyo Push-up (clap) | explosive horizontal push | Pow | BW | | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=plyo+push+up) |
 | Med-ball Chest Pass | explosive horizontal push | Pow | med, wall | wall | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=medicine+ball+chest+pass) |
 | Speed Bench (~50–60%) | RFD on the bench pattern | Pow | BB, bench | | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=speed+bench+press) |
 
@@ -108,7 +114,7 @@ Sub-grouped by ProPower pattern. **Transfer is narrow — train the pattern you 
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
 |---|---|---|---|---|---|---|
 | Barbell High Pull | explosive pull (traps, posterior) | Pow | BB | skill | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=barbell+high+pull) |
-| Explosive / Speed Row (~50–60%) | RFD on the row pattern | Pow | BB/cable | | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=explosive+row) |
+| Speed Row (~50–60%) | RFD on the row pattern | Pow | BB/cable | | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=explosive+row) |
 
 ### Rotation (no wall needed → cable)
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
@@ -121,7 +127,8 @@ Sub-grouped by ProPower pattern. **Transfer is narrow — train the pattern you 
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
 |---|---|---|---|---|---|---|
 | Pogo Hops | ankle stiffness / reactive | Pow | BW | calf | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=pogo+hops) |
-| Bounding / Skater Bounds | reactive horizontal / lateral | Pow | BW | calf, ecc | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=bounding+drill) |
+| Bounding | reactive horizontal | Pow | BW | calf, ecc | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=bounding+drill) |
+| Skater Bounds | reactive lateral | Pow | BW | calf, ecc | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=skater+bounds) |
 | Depth Jump | reactive SSC (advanced) | Pow | box | calf, ecc, skill | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=depth+jump) |
 
 ### Landing / deceleration (eccentric power — the neglected one)
@@ -142,7 +149,8 @@ Sub-grouped by ProPower pattern. **Transfer is narrow — train the pattern you 
 |---|---|---|---|---|---|---|
 | Suitcase Carry | obliques/QL (anti-lat-flex) | Stab/ME | DB/KB | U, calf | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=suitcase+carry) |
 | Farmer Carry | grip, trunk, total | Stab/ME | DB/KB/trap | calf | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=farmer+carry) |
-| Front-rack / Overhead Carry | anti-extension, shoulder stab | Stab | KB/DB | calf | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=overhead+carry) |
+| Front-rack Carry | anti-extension, trunk | Stab | KB/DB | calf | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=front+rack+carry) |
+| Overhead Carry | shoulder stab, anti-extension | Stab | KB/DB | calf | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=overhead+carry) |
 | Bottom-up KB Carry | grip + shoulder stability | Stab | KB | U | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=bottoms+up+kettlebell+carry) |
 
 ## Core / anti-rotation / stability (Core Stability model)
@@ -154,13 +162,15 @@ Sub-grouped by ProPower pattern. **Transfer is narrow — train the pattern you 
 | Pallof Press | anti-rotation | Stab | cable/band | | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=pallof+press) |
 | Dead Bug | anti-extension, coordination | Stab | BW | | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=dead+bug) |
 | Standing Cable Rotation | rotation control | Stab/Hyp | cable | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=standing+cable+rotation) |
-| Decline Crunch / Russian Twist | rectus/obliques (dynamic) | Hyp/ME | bench/+plate | spine⚠(flexion) | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=russian+twist) |
+| Decline Crunch | rectus (dynamic flexion) | Hyp/ME | bench/+plate | spine⚠(flexion) | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=decline+crunch) |
+| Russian Twist | obliques (rotation) | Hyp/ME | bench/+plate | spine⚠(flexion) | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=russian+twist) |
 
 ## Calf / lower-leg (rehab + tolerance)
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
 |---|---|---|---|---|---|---|
 | Single-leg Heel Raise (Alfredson, eccentric) | gastroc/soleus + Achilles | Rehab/Str | BW/step | U, calf | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=alfredson+heel+drop) |
-| Standing/Seated Calf Raise | calves | Hyp | mach/DB | calf | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=calf+raise) |
+| Standing Calf Raise | gastrocnemius (knee straight) | Hyp | mach/DB | calf | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=standing+calf+raise) |
+| Seated Calf Raise | soleus (knee bent) | Hyp | mach | calf | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=seated+calf+raise) |
 
 ## Isolation patches (weak-link fillers)
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
@@ -173,6 +183,7 @@ Sub-grouped by ProPower pattern. **Transfer is narrow — train the pattern you 
 ## Mobility / activation (warm-up; Cook readiness)
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
 |---|---|---|---|---|---|---|
-| Couch / Hip-flexor Stretch | hip flexors (unblock glute) | Mob | BW | | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=couch+stretch) |
+| Couch Stretch (hip flexor) | hip flexors (unblock glute) | Mob | BW | | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=couch+stretch) |
 | Hip 90/90 | hip rotation mobility | Mob | BW | | ✓ | [🎥](https://www.youtube.com/@DeltaBolic/search?query=hip+90+90) |
-| Banded Glute Bridge / Clamshell | glute activation (prime) | activation | band | | | [🎥](https://www.youtube.com/@DeltaBolic/search?query=banded+glute+activation) |
+
+> **Glute activation priming** (Banded Glute Bridge, Clamshell, Lateral Band Walk) lives in **Hip extension / glute** above — use those rows rather than duplicating them here.
