@@ -35,7 +35,7 @@ The complex system is "whole-body fitness" — dozens of interacting physiologic
 
 - **Per-axis goal decision (the core use):** for each of the 9, decide explicitly — *do I want it? if no, why not? if yes, why?* This is goals → constraints applied to fitness. The program must then cover every **wanted** axis with its specific stimulus + test.
 - **The goal set comes from the Centenarian Decathlon** (the physical tasks I want at 100 → which adaptations they require). Decathlon defines *what*; Galpin's 9 define *how* to train each.
-- **Coarser goal layer:** when the question is *selection and dose for one body region* rather than *which of the 9 axes*, use `[[_core/Models/Goal-Dictated Selection (Look, Feel, Perform)]]`. Note it carves the space differently — its "Feel" (spinal health / motor control) is **not** one of the 9 adaptations, so the two models complement rather than nest.
+- **Coarser goal layer:** when the question is *selection and dose for one body region* rather than *which of the 9 axes*, use `[[_core/Models/Effort-Frequency Trade-off (Look, Feel, Perform)]]`. Note it carves the space differently — its "Feel" (spinal health / motor control) is **not** one of the 9 adaptations, so the two models complement rather than nest.
 - **Test each axis separately — don't infer one from another** (1RM for strength, vertical jump / bar speed for power, VO₂max test, time-to-fatigue for endurance, etc.).
 
 ## Confidence

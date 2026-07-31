@@ -11,7 +11,7 @@ Render **one day's strength session**: goal first, then the weekly skeleton, bal
 
 ## Step 0 — Goal gate (ALWAYS FIRST, never skip)
 
-Model: `Models/Goal-Dictated Selection (Look, Feel, Perform).md`. **A session is not designable until the primary driver is named**, because the driver — not the exercise list — sets effort-proximity, frequency and fatigue budget. Getting this wrong is the failure this gate exists to prevent.
+Model: `Models/Effort-Frequency Trade-off (Look, Feel, Perform).md`. **A session is not designable until the primary driver is named**, because the driver — not the exercise list — sets effort-proximity, frequency and fatigue budget. Getting this wrong is the failure this gate exists to prevent.
 
 **Establish the driver in this order:**
 1. **Read it** from `<Person>/Practices` (weekly plan / goals section) or `<Person>/Health profile`. If a current block goal is documented, use it and **say which one you're using in one line**.

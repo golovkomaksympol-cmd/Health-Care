@@ -1,6 +1,8 @@
-# Goal-Dictated Selection — Look / Feel / Perform (Andy Galpin)
+# Effort–Frequency Trade-off — Look / Feel / Perform (Andy Galpin)
 
-A **dosing decision-rule**: what you're training *for* fixes the effort-proximity and frequency you must use, and those two cannot be maximised together. Entry point for `plan-workout` — no session is designed before the driver is named.
+**Effort-proximity and frequency are inversely coupled**, so the goal you name fixes the dose you're allowed to use — and no single dose serves every goal. Entry point for `plan-workout`: no session is designed before the driver is named.
+
+*(Named for the mechanism, not the framework. "Goal dictates selection" is the framework's slogan and is near-tautological; the trade-off is the part that makes testable, contradictable claims — see Falsification.)*
 
 Not a capacity. The trunk capacity itself is `_core/Models/Core Stability.md`; which adaptation axis you're chasing is `_core/Models/Training Adaptations (Galpin 9).md`.
 
