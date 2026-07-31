@@ -34,6 +34,7 @@ Unifying principle: **proximal stability for distal mobility** — a stable cent
 
 ## Practice
 
+- **Dose it by goal, not by habit** — trunk work is where dose-mismatch is commonest (daily near-failure ab work, or weekly low-load dead bugs). Which load/frequency profile to use, plus the 5-step loading ladder: `[[_core/Models/Goal-Dictated Selection (Look, Feel, Perform)]]`.
 - **Test:** **Sahrmann 5-level core test** (maintain neutral lumbopelvic position via abdominal bracing under progressively harder leg loading, levels 0–5 → exposes where control fails). Plus **McGill endurance tests** (side-bridge, flexor, extensor endurance + their ratios).
 - **Train:** **McGill Big 3** (curl-up, side bridge, bird dog) as the base; anti-extension / anti-lateral-flexion / anti-rotation progressions; **carries** (suitcase, farmer); **Pallof press**, chops. Neutral spine, quality reps, endurance bias — not heavy 1RM.
 
