@@ -94,7 +94,7 @@ Then generate from `Exercise Catalog.md` + `Training Framework.md` alone, and st
 - If a constraint and the plan conflict, the constraint wins — say which exercise you swapped and why.
 
 ## Step 6 — Output (loggable — matches skill `log`)
-Group by block (**Warm-up / Power / Strength / Hypertrophy / Core**). Per exercise: `Name — sets × reps, load, @RIR, rest` **+ the exercise's 🎥 link from the Exercise Catalog** so the trainee can review form. Copy the link from the catalog row; don't invent a URL.
+Group by block (**Warm-up / Power / Strength / Hypertrophy / Core**). Per exercise: `Name — sets × reps, load, @RIR, rest` **+ the exercise's 🎥 link if the Exercise Catalog row has one.** Copy the link verbatim from the catalog row. **If the cell is blank, omit the link entirely — never invent a URL or substitute a search link.**
 - **First line: the driver** — `Driver: PERFORM (from Practices)` / `(inferred from last 5 sessions)` / `(you told me)`. Then a one-line rationale: which rotation day, what it balances, any readiness adjustment.
 - **Last line: ⚠️ one watch-out**, picked from the Step 0 watch-list because it applies to *this* session — e.g. "same exercises, harder intent — don't go chasing new ones", or "FEEL block: not to failure, or you lose the frequency". One line, concrete, tied to what's actually in the plan, **in the user's language**. Skip it only if nothing on the list is genuinely at risk today.
 - Power slot: prefer a pattern **not** trained recently (broaden the ProPower vector), and one that's practical in the trainee's gym (e.g. no med-ball throws without a wall → use cable rotation / plyo / jumps).
