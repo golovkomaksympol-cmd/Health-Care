@@ -101,7 +101,7 @@ Sub-grouped by ProPower pattern. **Transfer is narrow — train the pattern you 
 ### Hinge / posterior ballistic
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
 |---|---|---|---|---|---|---|
-| Kettlebell Swing | posterior chain (hip power) | Pow | KB | | ✓ |  |
+| Kettlebell Swing | posterior chain (hip power) | Pow | KB | | ✓ | [🎥](https://www.youtube.com/shorts/3lMRRqyTuK8) |
 | Power Clean | total posterior explosive | Pow | BB | skill | |  |
 | Broad Jump | horizontal hip explosive | Pow | BW | calf, ecc | |  |
 
