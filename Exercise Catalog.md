@@ -182,6 +182,23 @@ Sub-grouped by ProPower pattern. **Transfer is narrow — train the pattern you 
 | Biceps Curl | biceps | Hyp | DB/BB/mini | | ✓ | [🎥](https://www.youtube.com/shorts/MKWBV29S6c0) |
 | Triceps Pushdown | triceps | Hyp | cable | | ✓ | [🎥](https://www.youtube.com/shorts/d9l2AYTGIEs) |
 
+## Knee / foot (rehab & control — FEEL dose, never near failure)
+Load-related knee pain (patellofemoral, ITB) responds to **hip and quad control**, not to "knee exercises" as such — so frontal-plane glute work belongs to this block too (rows in **Hip extension / glute**). Isometrics are the analgesic entry on the loading ladder. Foot/toe work is about **loading the first ray properly**; a callus is a friction sign, so **check shoe fit before blaming the muscles**.
+
+| Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
+|---|---|---|---|---|---|---|
+| Spanish Squat | quad isometric, knee-friendly | Rehab/Str | band, rack | | |  |
+| Step-down (controlled) | knee control in the frontal plane | Rehab/Stab | box/step | U, ecc | |  |
+| Terminal Knee Extension (TKE) | vastus medialis, end-range knee ext | Rehab | band | | |  |
+| Wall Sit | quad isometric (analgesic) | Rehab/ME | BW | | |  |
+| Copenhagen Plank | adductors, pelvic control | Stab | bench | U, ecc | |  |
+| BlackBoard — hallux dorsiflexion | big-toe extensors, first-ray control | Rehab/Stab | BlackBoard | U, skill | |  |
+| BlackBoard — hallux plantarflexion | flexor hallucis, first-ray load | Rehab/Stab | BlackBoard | U, skill | |  |
+| Short Foot (arch doming) | intrinsic foot muscles | Rehab/Stab | BW | U, skill | |  |
+| Toe Splay / Spread | toe abductors, forefoot width | Rehab/Mob | BW/spacers | | |  |
+
+> **Dosing:** these are **FEEL** work — deliberately submaximal, high quality, repeatable near-daily. Taking them near failure converts them to LOOK work and destroys the frequency that makes them work. Enter at the step of the loading ladder you can own: isometric → anti-movement + fatigue → anti-movement + load → movement + fatigue → movement + load. **Introduce one novel item at a time** (`ecc`/`skill` flags stack badly).
+
 ## Mobility / activation (warm-up; Cook readiness)
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
 |---|---|---|---|---|---|---|
