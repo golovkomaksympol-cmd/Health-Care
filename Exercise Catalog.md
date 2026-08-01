@@ -8,7 +8,8 @@ Pick-list for the `plan-workout` skill. The agent **selects from here** (filtere
 - **Flags:** `U`=unilateral · `spine⚠`=loaded spine → neutral/control (hypermobility) · `calf`=loads calf/Achilles · `ecc`=eccentric/CK-heavy (novel-load caution) · `skill`=high technique · `wall`=needs wall/partner/space to throw (impractical in a standard commercial gym)
 - **Fam** (familiar) = already in **your** current repertoire → lower skill/injury risk than a novel movement. Mark these yourself with `✓`; the planner prefers them when readiness is low or a novel stimulus would stack risk. An empty column is fine — it just means "nothing marked yet".
 - **🎥** = direct link to a curated form-reference clip for that exact movement. **A blank cell means no clip has been chosen yet** — don't fabricate a URL and don't substitute a search link; either leave it blank or tell the trainee to search the exercise name. The column fills in over time.
-- **One row = one movement = one clip.** Don't merge two exercises into a row with a slash; give each its own row. A parenthetical is an alias for the *same* movement (e.g. `Plyo Push-up (clap)`), not a second exercise.
+- **One row = one movement.** Don't merge two exercises into a row with a slash; give each its own row. A parenthetical is an alias for the *same* movement (e.g. `Plyo Push-up (clap)`), not a second exercise. One clip per row is the norm; a second is fine only when it covers the *same* movement from another angle.
+- **Setup often matters as much as the exercise.** For many rows the same movement hits a different muscle depending on foot position, torso lean, grip or joint angle — see **[Variant selection](#variant-selection--where-the-setup-changes-the-target)** at the end of this file. When an exercise with variants is prescribed, the variant must be named.
 
 > In-gym adaptations: Str, Pow, Hyp, ME, Stab. **Trained OUTSIDE the gym (not here):** VO₂max/Zone 5 (Norwegian), Zone 2 / long-duration (run), skill/gait (running technique), dance. See `Practices`.
 
@@ -188,3 +189,60 @@ Sub-grouped by ProPower pattern. **Transfer is narrow — train the pattern you 
 | Hip 90/90 | hip rotation mobility | Mob | BW | | ✓ |  |
 
 > **Glute activation priming** (Banded Glute Bridge, Clamshell, Lateral Band Walk) lives in **Hip extension / glute** above — use those rows rather than duplicating them here.
+
+---
+
+## Variant selection — where the setup changes the target
+
+Same exercise, different setup → **different muscle does the work**. When an exercise below is prescribed, the plan must name **which variant and why** (see the `plan-workout` skill). Default rule: pick the variant that hits the pattern the session is *for*, and avoid the variant that doubles a muscle already loaded elsewhere that day.
+
+**What's real vs what's marketing.** The shifts listed here work through **joint angle → muscle length and moment arm** (knee angle, torso lean, foot position, where the arm sits relative to the torso). Those are mechanical and reliable. Claims about steering load *within* one muscle head — "inner/outer chest", biceps "peak", toe angle for quad "sweep" — are **not** reliable; they aren't in this table.
+
+### Lower body
+| Exercise | What you change | Variant → emphasis |
+|---|---|---|
+| Back Squat | bar position / stance | high-bar + upright → **quads**; low-bar + more hip hinge → **glutes + posterior chain**; wide stance → **adductors/glutes**; heels elevated → **quads** |
+| Leg Press · Hack Squat | foot placement on platform | low on platform → **quads**; high → **glutes + hamstrings**; wide + toes out → **adductors/glutes** |
+| Leg Extension | seat/hip angle | reclined (hip open) → **rectus femoris** at long length; upright → **vasti** |
+| Romanian Deadlift | knee angle / stance | stiffer knee, less hip travel → **hamstrings**; softer knee, more hip travel → **glutes**; wide stance → **adductors/glutes** |
+| Trap-bar Deadlift | handle height | high handles → shorter ROM, **more quad**, less lower-back; low handles → closer to conventional, **hamstrings/erectors** |
+| 45° Back Extension | spine + pelvis | neutral spine, posterior pelvic tilt, toes out → **glutes**; spine flexing/extending through the rep → **erectors** |
+| Leg Curl | hip position / ankle | seated (hip flexed → hamstring stretched) → stronger **long-length hamstring** stimulus; lying → shortened; ankle dorsiflexed → adds **gastrocnemius** |
+| Machine Hip Thrust | foot position at lockout | shin **vertical** → **glute max**; feet closer to hips → **quads**; feet further forward → **hamstrings**; wider + toes out → more **upper glute / glute med** |
+| Cable Glute Kickback | knee angle | knee held bent → isolates **glute max**; straight leg → adds **hamstring** |
+| Hip Abduction (machine) | torso angle | leaned forward → **upper glute max**; upright/leaned back → **glute medius** |
+| Step-up | box height / torso | higher box + forward lean → **glutes**; lower box + upright → **quads** |
+| Bulgarian Split Squat | torso + front-foot distance | upright, foot closer → **quads**; leaned forward, foot further → **glutes/hamstrings** |
+| Reverse Lunge | step length | short step → **quads**; long step → **glutes/hamstrings** |
+| Standing vs Seated Calf Raise | knee angle | knee **straight** → **gastrocnemius**; knee **bent** → **soleus** (this is why both rows exist; Alfredson uses both) |
+
+### Upper body — push
+| Exercise | What you change | Variant → emphasis |
+|---|---|---|
+| Bench / Incline Press | bench angle · grip width | flat → **mid pec**; 15–30° → **upper (clavicular) pec**; >45° drifts to **anterior delt**; wider grip → **pec**; narrower → **triceps** |
+| Dips | torso lean · elbow path | leaned forward, elbows out → **chest**; upright, elbows tucked → **triceps** |
+| Overhead Press (BB) | standing vs seated | standing → whole-body/**trunk** demand, less load; seated → more isolated **delts**, heavier possible. *Behind-the-neck: skip — shoulder risk, worse with hypermobility.* |
+| DB Shoulder Press | grip | neutral/hammer → **anterior delt**, shoulder-friendlier; pronated → slightly more **lateral delt** |
+| Lateral Raises | cable/lean vs dumbbell | leaning away on a cable → tension in the **stretched** position; dumbbell → tension at the **top** |
+| Triceps | arm position | overhead extension → **long head** (stretched); pushdown → **lateral/medial heads** |
+
+### Upper body — pull
+| Exercise | What you change | Variant → emphasis |
+|---|---|---|
+| Barbell Row · Seated Cable Row | elbow path · grip · torso angle | elbows tucked ~45°, underhand/neutral → **lats**; elbows flared ~90°, wide overhand → **rear delts, rhomboids, traps**; torso more horizontal → **mid-back**; more upright → **upper traps** |
+| Pull-up · Lat Pulldown | grip | wide pronated → **lats**, least biceps; supinated (chin-up) → **biceps + lower lats**; neutral → **brachialis**, easiest on shoulder/elbow. Leaning back ~30° on the pulldown turns it into a **row (mid-back)** |
+| Biceps Curl | where the arm sits | incline, arm behind torso → **long head** at long length; preacher, arm in front → **short head**; hammer/neutral → **brachialis + brachioradialis** |
+
+### Power
+| Exercise | What you change | Variant → emphasis |
+|---|---|---|
+| Kettlebell Swing | swing height | **Russian** (to chest/eye level) → **hip power** — this is the one the ProPower model wants; **American** (overhead) adds shoulder demand + lumbar extension → **skip with `spine⚠` / hypermobility** |
+| Push Press vs Overhead Press | leg drive | with leg drive → **power (RFD)**; strict → **shoulder strength** |
+
+### Core / carries
+| Exercise | What you change | Variant → emphasis |
+|---|---|---|
+| Carries | how the weight is held | **the position *is* the variant** — suitcase (one side) → **anti-lateral-flexion**; farmer (both) → **grip + trunk**; front-rack → **anti-extension + thoracic**; overhead → **shoulder stability**; bottom-up → **grip + cuff/shoulder control** |
+| Pallof Press | stance · distance from anchor | half-kneeling → removes leg drive, harder on the **trunk**; split stance → adds **hip stability**; further from the anchor → longer lever, harder |
+| Side Plank | base of support | from knees → regression; feet stacked → full; top leg forward → wider base, easier |
+| Standing Cable Rotation | hips locked or free | hips locked → **trunk rotation control**; hips free → **whole-body rotational power** |
