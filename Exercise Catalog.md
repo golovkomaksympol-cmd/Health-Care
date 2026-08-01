@@ -187,7 +187,7 @@ Load-related knee pain (patellofemoral, ITB) responds to **hip and quad control*
 
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
 |---|---|---|---|---|---|---|
-| Spanish Squat | quad isometric, knee-friendly | Rehab/Str | band, rack | | |  |
+| Spanish Squat | quad isometric, knee-friendly | Rehab/Str | band, rack | | | [🎥](https://www.youtube.com/shorts/lqAh-DpfoZA) |
 | Step-down (controlled) | knee control in the frontal plane | Rehab/Stab | box/step | U, ecc | |  |
 | Terminal Knee Extension (TKE) | vastus medialis, end-range knee ext | Rehab | band | | |  |
 | Wall Sit | quad isometric (analgesic) | Rehab/ME | BW | | |  |
