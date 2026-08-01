@@ -66,7 +66,7 @@ Pick-list for the `plan-workout` skill. The agent **selects from here** (filtere
 ## Vertical push
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
 |---|---|---|---|---|---|---|
-| Overhead Press (BB) | delts, triceps, trunk | Str/Hyp | BB/mini, rack | spine⚠(overhead) | ✓ |  |
+| Overhead Press (BB) | delts, triceps, trunk | Str/Hyp | BB/mini, rack | spine⚠(overhead) | ✓ | [🎥](https://www.youtube.com/shorts/4LBVP2Oe7fg) [🎥](https://www.youtube.com/shorts/zoN5EH50Dro) |
 | DB Shoulder Press | delts | Hyp/Str | DB | | ✓ |  |
 
 ## Horizontal pull
