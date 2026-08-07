@@ -84,4 +84,6 @@ The lecture's spine, and this library's: **a precise prediction is valid for one
 
 ## Source
 
+Applied companions: [[Models/Signal-vs-Noise in Lab Practice]] puts error bars on "measure", and [[Models/Optimum vs Norm]] grades the evidence behind a target before you aim at it.
+
 Reconstructed from the lecture **«Логика в хаосе: Научный метод и мера ноль»** (course *Логика как фундамент мышления*). Executable companion: the empirical cycle (Mode A) inside the `deep-think` skill.

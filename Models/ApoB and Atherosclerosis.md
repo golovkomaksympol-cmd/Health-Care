@@ -70,4 +70,6 @@ The complex system is "will I get atherosclerosis?" — a tangle of LDL-C, parti
 
 ## Patient-side applications
 
+This is the **Tier A worked example** in [[Models/Optimum vs Norm]] — RCT and Mendelian randomization agree with a monotonic dose-response, so the optimal ApoB target genuinely outranks the population reference range. Most biomarker "optima" are not on this footing.
+
 Patient files should link here when their lipid protocol depends on this model. Patient-specific tuning (current ApoB, current drug, dose, monitoring cadence, side effects, ABCG2 status) lives in their `Medical Profile.md` and `Practices`.

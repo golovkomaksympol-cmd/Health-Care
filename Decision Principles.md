@@ -4,7 +4,9 @@ How to choose interventions when reasoning about a patient's care.
 
 ## Optimal > Normal
 
-Lab "reference ranges" are population averages — half the population is sub-optimal. Aim for **optimal targets** (Medicine 3.0 / Attia-style) with a margin of safety, not just "within normal".
+Lab "reference ranges" are population averages — built from a sampled population, so where that population is unhealthy the range encodes the disease as normal. Aim for **outcome-anchored optimal targets** with a margin of safety, not just "within normal".
+
+**But grade the optimum before chasing it.** An optimum backed by RCT + Mendelian randomization (ApoB) outranks the reference range; an optimum from observational data or a "functional range" does not — it is just differently biased, and chasing it with a fixed escalating dose is how overtreatment happens. Full model incl. evidence tiers and failure modes: `_core/Models/Optimum vs Norm.md`. A target is also useless if it is narrower than the marker's measurement noise — `_core/Models/Signal-vs-Noise in Lab Practice.md`.
 
 ## Input-driven control
 

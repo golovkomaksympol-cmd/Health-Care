@@ -57,3 +57,8 @@ NNT is **meaningless without its time window** — "NNT 50" over 5 years ≠ ove
 - **Population statistic — silent on the individual;** cannot identify responders.
 - **Trial NNT ≠ your NNT** (baseline risk, adherence, comorbidity, real-world vs. RCT conditions).
 - **Awkward CIs** — treat as communication, not as a quantity to pool.
+
+## Related
+
+- [[Models/Optimum vs Norm]] — converts "is the target real?" into a gradeable question before NNT asks whether hitting it is worth it
+- [[Models/Signal-vs-Noise in Lab Practice]] — whether the marker you'd treat to can even be measured well enough to steer by
