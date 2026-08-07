@@ -37,6 +37,41 @@ You did not measure the person. You measured one tube of their blood, once, on o
 
 **With n ≥ 3, never read consecutive pairs.** Three draws around a constant will nearly always look like "rose, then fell" — one of them has to be the largest. That shape is the *expected appearance of noise*. Test the whole series against the flat model first; only if flat is rejected does direction mean anything.
 
+### Distributional assumptions — where this arithmetic breaks
+
+Everything above assumes measurement error is **approximately Gaussian on some scale**. That assumption fails in four distinct ways, and **only the first is repairable.**
+
+| # | Failure | Typical markers | Repairable? |
+|---|---|---|---|
+| 1 | **Right skew (log-normal)** — the common case in biochemistry | ferritin, TG, insulin, CRP, HOMA-IR, most hormones | **Yes — do the arithmetic on the log scale** |
+| 2 | **Regime mixture** — the value is drawn from different distributions depending on a latent state, so no single σ exists | CRP in health (0.3–3) vs infection (30–300); ferritin ± inflammation | **No — identify the regime first, then apply within it** |
+| 3 | **Censored value** — the result is a bound, not a number | `<0.40`, `>90`, `<0.2` | **No — CI and RCV are undefined. Do not compute them** |
+| 4 | **True fat tail** — variance unstable, sample σ does not converge; the extreme observation *is* the signal, not noise to average away | rare in a stable within-person series; real across states | **No — leaves this framework entirely** |
+
+**Case 1 — the log-scale fix (use it by default for skewed markers):**
+
+> σ_log = √(ln(1 + CV_within²)) · **CI = x · e^(±1.96·σ_log)** · **RCV_log = √2 · 1.96 · σ_log**, applied as multiplicative factors e^(±RCV_log)
+
+This yields **asymmetric** limits, and the asymmetry is large enough to flip conclusions:
+
+| CV_within | Naive symmetric RCV | Rise must exceed | Fall must exceed |
+|---|---|---|---|
+| 10% | ±28% | **+32%** | **−24%** |
+| 15% | ±42% | **+51%** | **−34%** |
+| 20% | ±55% | **+73%** | **−42%** |
+| 25% | ±69% | **+98%** | **−49%** |
+| 30% (CRP) | ±83% | **+126%** | **−56%** |
+
+**The naive symmetric test systematically over-calls rises and under-calls falls,** and the error grows with CV. At CV 20%: a +60% rise looks significant symmetrically but is not (needs +73%); a −45% fall looks like noise but is real (needs only −42%). Read a skewed marker symmetrically and you will invent improvements and miss deteriorations — in that order.
+
+**Case 3 — censored values are not small numbers.** `hsCRP <0.40` means "below the quantitation limit", not "0.40" and not "0.2". Substituting a number and computing a CI fabricates precision that does not exist. Treat it as an interval `[0, LoQ)` and reason about the *decision*: if the entire interval sits on one side of the threshold, the measurement resolved the question — which is usually the case at the low end, and is why a censored result is often perfectly actionable even though it is unquantified.
+
+**Two further violations, independent of shape:**
+
+- **CV_a is not constant across the measuring range.** Published analytical CV is a mid-range figure; near the limit of quantitation it degrades badly, often 2–3×. Low-end values are noisier than the table implies.
+- **CV_i is interval-dependent, and RCV assumes independent draws.** Population CV_i is typically derived from draws weeks apart. Two draws three days apart are autocorrelated — for slow-drifting markers (ferritin, HbA1c) the real short-interval noise is smaller, and for pulsatile ones (insulin, cortisol) it can be larger. Using one CV_i for every spacing misstates both.
+- **Derived quantities inherit and amplify.** HOMA-IR is a *product* of two noisy variables, TG/HDL and fT3/fT4 are *ratios* — errors combine multiplicatively, so these are more skewed than their inputs and belong on the log scale by construction. A ratio whose denominator can approach zero is pathological in the tail and should not be trusted there at all.
+
 ### Index of individuality — why "within range" can be meaningless
 
 **II = CV_i / CV_g**
@@ -123,18 +158,21 @@ Twenty numbers, each with a grey bar, several flagged, and a narrative that seem
 
 1. **The CVs aren't this person's.** The whole apparatus imports a *population* CV_i to compute *this individual's* interval. Personal biological variation can be materially narrower or wider, so the CI is itself model-dependent — possibly wrong in either direction. → **Qualified:** the interval is a prior-based estimate, not a measured one. For a high-stakes, repeated decision, estimate personal CV from ≥3 draws taken in a stable state and use that instead.
 
-2. **Symmetric intervals are wrong for skewed analytes.** Ferritin, CRP, TG, insulin are right-skewed; ±1.96σ on the raw scale misplaces both limits, and the lower bound especially. → **Qualified:** for skewed analytes compute on the **log scale**, giving asymmetric limits. The raw-scale version is an approximation that degrades as skew rises.
+2. **The Gaussian assumption — the sharpest attack on the arithmetic itself.** Most biochemistry is right-skewed, so symmetric ±1.96σ misplaces both limits; at CV 20% the true thresholds are +73% / −42%, not ±55%, which is enough to flip a verdict in either direction. Worse, some markers are not one distribution at all: CRP in health and CRP in infection are different regimes, and a censored `<0.40` is not a number you can put a CI on. → **Partly lands, and splits the model in two.** The skew half is fully repairable — work on the log scale, and the machinery is exact again; this covers most of biochemistry, so "the model only works for Gaussian data" is too strong. The **mixture, censoring and fat-tail halves are not repairable inside this framework** and become hard preconditions: identify the regime, refuse to compute on a bound, and treat a genuine tail observation as signal rather than scatter. See *Distributional assumptions* above.
 
 3. **The strongest attack: it can induce harmful inaction.** Demanding statistical significance before acting will miss real deterioration in exactly the markers with huge RCV. A CRP that doubles is "not significant" at RCV >85%; a ferritin of 5 is one draw. **Statistical non-significance is not clinical irrelevance.** → **This one partly lands, and becomes a hard boundary:** RCV governs *"did this change from before?"*, never *"is this value dangerous now?"* Absolute value in a critical range overrides the entire apparatus.
 
-**Result — survives, qualified.** It genuinely defeats the two commonest interpretation errors (acting on scatter, and narrating a trend out of three points), but only (a) with population CVs flagged as priors, (b) on the log scale for skewed analytes, (c) where a stationary setpoint exists at all, and (d) **with absolute-danger override sitting above it.** Those four qualifiers are the model, not footnotes.
+**Result — survives, qualified.** It genuinely defeats the two commonest interpretation errors (acting on scatter, and narrating a trend out of three points), but only (a) with population CVs flagged as priors, (b) **on the log scale for skewed analytes — the symmetric form is wrong by default in biochemistry**, (c) where a single stationary regime exists at all and the value is not censored, and (d) **with absolute-danger override sitting above it.** Those four qualifiers are the model, not footnotes.
 
 ## Boundaries
 
 - **Change-detection only.** Never let RCV suppress action on a dangerous absolute value. Severe anemia, glucose in diabetic range, calcium disturbance, markedly abnormal liver/kidney function → act on one draw, escalate to a clinician.
 - **No stationary setpoint → model inapplicable.** Cycle-dependent hormones in irregular cycles, acute-phase reactants during illness. Not "imprecise" — *not defined*.
 - **Population CVs are priors**, not this person's values.
-- **Skewed analytes need log-scale treatment.**
+- **Gaussian-on-some-scale is a precondition, not a detail.** Right skew → log scale (default for biochemistry). **Regime mixture, censored results (`<LoQ`, `>ULoQ`) and true fat tails are outside the model** — do not compute a CI or RCV for them; establish the regime, or reason directly from the bound and the threshold.
+- **Analytical CV degrades near the limit of quantitation** — low-end values are noisier than the budget table shows.
+- **RCV assumes independent draws and one fixed spacing.** Short-interval repeats are autocorrelated; the population CV_i does not transfer to every interval.
+- **Products and ratios (HOMA-IR, TG/HDL) amplify error multiplicatively** and are log-scale objects by construction.
 - **Bias is not covered.** Confounders (iron deficiency raising HbA1c; inflammation raising ferritin; a lab switch) are *systematic* — they survive averaging and this model does not detect them. Handle separately.
 - **Pooling across a regime change is invalid** — a new drug, dose, illness or season starts a new series.
 - **Silent on whether the marker is worth measuring at all** — that is [[Models/NNT (Number Needed to Treat)]] and the tiering step of the `lab-panel` skill.

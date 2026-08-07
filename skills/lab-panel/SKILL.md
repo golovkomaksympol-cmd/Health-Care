@@ -83,6 +83,9 @@ What this step does in a panel workflow:
 **When reading.**
 
 1. Convert each decision-relevant value into **value ± 95% CI** using the model's CV_within. Never report a bare number.
+   - **Right-skewed markers (ferritin, TG, insulin, CRP, HOMA-IR, most hormones) must use the model's log-scale form** — the symmetric version over-calls rises and under-calls falls. Never eyeball a skewed marker symmetrically.
+   - **A censored result (`<0.40`, `>90`) has no CI.** Don't compute one; reason from the bound against the threshold.
+   - **Check the regime first.** CRP during infection, ferritin during inflammation — different distribution, not a noisier draw. The arithmetic doesn't apply until the regime is named.
 2. Put the **decision threshold on the same line as the CI**:
    - threshold **outside** the CI → the measurement resolved it → **act**;
    - threshold **inside** the CI → **it did not** → do not act on it. In order: take the action safe across the whole interval (usually *change nothing*), repeat under identical conditions and pool, or switch to a lower-noise marker.
