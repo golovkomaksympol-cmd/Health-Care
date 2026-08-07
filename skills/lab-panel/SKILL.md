@@ -1,6 +1,6 @@
 ---
 name: lab-panel
-description: Design a blood-test panel, or interpret one that came back. Use when the user asks which labs to order ("какие анализы сдать", "проверить метаболизм", "what tests should I get", "check my metabolism/thyroid/iron"), asks whether a test is worth doing, or hands over results and asks what they mean. Tiers tests by whether they change an action, models measurement noise before declaring a trend, and names the confounders that fake a result.
+description: Design a blood-test panel, or interpret one that came back. Use when the user asks which labs to order ("какие анализы сдать", "проверить метаболизм", "what tests should I get", "check my metabolism/thyroid/iron"), asks whether a test is worth doing, or hands over results and asks what they mean. Tiers tests by whether they change an action, treats every result as an estimate of an unseen true value (naming the four sources of noise), refuses to act when noise exceeds signal, and names the confounders that fake a result.
 ---
 
 # Lab-panel skill
@@ -10,6 +10,8 @@ description: Design a blood-test panel, or interpret one that came back. Use whe
 Two jobs, same spine: **assemble a panel** (before) and **read it honestly** (after). The spine is `Decision Principles.md` + `Trigger Diagnostics.md` + `meta-thinking.md` (framework root — `_core/` in a health-repo setup, `../../` from this file standalone).
 
 **The one rule everything else serves:** a test earns its place only if its result would **change an action**. Everything else is anxiety with a co-pay.
+
+**Its metrological twin:** a result is an *estimate of a value you cannot see*, carrying uncertainty. When the uncertainty is wider than the decision, the correct move is to **not decide** — see Step 3.
 
 ## Step 0 — What is the actual question?
 
@@ -70,25 +72,99 @@ For each one, ask out loud:
 
 > Other systems: build the same way — Tier 1 = what decides, Tier 2 = what makes Tier 1 readable, Tier 3 = gated by `Trigger Diagnostics.md`.
 
-## Step 3 — Model the noise BEFORE reading any result
+## Step 3 — Metrology: you are estimating a value you cannot see
 
-A single value is a **draw from a distribution**, not a fact. Establish the noise band first, or you'll chase measurement scatter as if it were biology.
+This is the step people skip, and it is the one that decides whether drawing the blood was worth it.
 
-- **σ ≈ value × CV_within**, where **CV_within = √(CV_analytical² + CV_intra-individual²)**
-- **"Nothing changed" band (95%)** ≈ baseline ± 1.96σ — where a repeat lands if nothing really moved.
-- **RCV (reference change value)** = √2 × 1.96 × CV_within — how far two results must diverge before the change is real. (Both draws carry error, hence the √2.)
+**What a result actually is.** You did not measure the person. You measured one tube of their blood, once, on one machine, on one morning. What you want is **μ — their current true setpoint** for that analyte. What you get is:
 
-Approximate population CV_intra (%) — **not** this person's own; use as a prior and flag it:
+> **x_observed = μ_true + ε_analytical + ε_pre-analytical + ε_biological**
 
-| Very low noise (trust one value) | Moderate | **High noise (never decide on one draw)** |
+Interpretation means running that backwards: from the number on the page, infer a **range** that plausibly contains μ_true — then ask whether the decision is the same everywhere in that range. If yes, act. If no, the measurement did not answer the question, however precise the printout looks.
+
+**This is metrology, not medicine.** A measurement carries no information unless its uncertainty comes with it. `fT3 = 2.52` is not a fact. `fT3 = 2.52 ± 0.47 (95% CI)` is.
+
+### 3a. Where the noise comes from — name the sources, don't just quote a CV
+
+Four independent sources stack. Variances add, so **σ_total = √(Σσᵢ²)**. Most people account for the first and get ambushed by the second.
+
+| Source | What it actually is | Typical size | Controllable? |
+|---|---|---|---|
+| **Analytical** (CV_a) | Assay imprecision, calibration drift, reagent lot change, analyzer differences, method differences (HbA1c by HPLC vs immunoassay; LDL calculated vs direct) | 2–7% most chemistry; more for immunoassays | Partly — same lab, same method |
+| **Pre-analytical** | Everything between the person and the analyzer: fasting state, time of day, posture, tourniquet time, hemolysis, delay to centrifugation, tube type, recent exercise / alcohol / stress | **Usually the largest single source, and the most ignored.** 5–50% depending on analyte | **Yes — this is the one you can actually fix** (Step 5) |
+| **Within-person biological** (CV_i) | Genuine physiological oscillation around the setpoint: pulsatile secretion (insulin every 5–15 min; LH/GH/cortisol pulses), circadian rhythm, menstrual phase, season | 2% (HbA1c) to >30% (CRP) | No — irreducible. Only averaging draws reduces it |
+| **Between-person biological** (CV_g) | How widely setpoints differ across people | — | Not noise for one person — but see 3c |
+
+**A lab switch is not noise, it is bias.** Noise is random and averages out; a different platform or method shifts every result the same way. Never absorb a lab change into a trend silently — re-baseline, or state that the comparison isn't clean.
+
+### 3b. The arithmetic
+
+**CV_within = √(CV_a² + CV_i²)** · **σ = value × CV_within**
+
+| Question | Formula | Read as |
 |---|---|---|
-| HbA1c ~2 · MCV ~1–2 · albumin ~3 · calcium ~2 | HGB ~3 · glucose ~5 · fT3/fT4 ~5–8 · creatinine ~5 · ApoB ~7 · cholesterol ~6 | **insulin ~20 · HOMA-IR ~23 · TG ~20 · TSH ~20 · ferritin ~15 · vitamin D ~12 · CRP >30** |
+| Where is the true value, from one draw? | **x ± 1.96σ** | 95% CI for μ_true |
+| Did two draws really differ? | **RCV = √2 × 1.96 × CV_within** | Change must exceed RCV to be real (√2 — both draws carry error) |
+| Is there a trend across n ≥ 3 draws? | **χ² = Σ(xᵢ − x̄)² / σ²**, df = n−1 | Large p → scatter fully explained by noise → **flat model stands** |
+| Best estimate from n draws | **x̄ ± 1.96 σ/√n** | Averaging is the only way to beat biological noise |
+| How many draws to pin it to ±δ%? | **n ≈ (1.96 × CV_within / δ)²** | Often a sobering number |
 
-**The consequence people miss:** if a decision threshold sits **inside** the noise band, one measurement cannot resolve it. Example: HOMA-IR 2.0 → 1.5 is a 25% drop, but RCV for HOMA-IR is ~60% — statistically indistinguishable. **Say so** rather than flipping a decision on it; anchor on the low-noise marker (HbA1c) or repeat under identical conditions.
+For df = 2 (three draws) the p-value has a closed form: **p = e^(−χ²/2)**.
 
-Corollary: prefer markers whose expected treatment effect **exceeds** their noise. If the intervention is expected to move a marker by less than its RCV, that marker can't verify the intervention.
+**With three or more points, never read consecutive pairs.** Three random draws around a constant will nearly always look like "rose, then fell" — one of them has to be the largest. That shape is the *expected appearance of noise*, not a turning point. Test the whole series against the flat model first; only if flat is rejected do you tell a story about direction.
 
-## Step 4 — Confounders: the results that lie
+> **Worked example.** fT3 measured three times: 2.65 → 3.01 → 2.52 (CV_within 9.4%). Mean 2.73. Predicted σ = 2.73 × 0.094 = 0.257; **observed SD = 0.254** — the scatter *is* the predicted noise, to two figures. χ² = 1.95, df = 2, **p = 0.38** → flat model not rejected. Best estimate **2.73, 95% CI [2.44–3.02]**. The apparent rise-and-fall was nothing. And to pin that same fT3 to ±5% would need n ≈ 14 draws — so "hit an optimal fT3 of exactly 3.0" is not a reachable target by blood draw.
+
+### 3c. Index of individuality — why "within range" can be meaningless
+
+**II = CV_i / CV_g**
+
+- **II < 0.6** — the person's own oscillation is narrow next to how much people differ. Population reference ranges are close to useless: someone can move far from their own setpoint and still sit comfortably inside the grey bar. True for TSH, creatinine, ferritin, many hormones.
+- **II > 1.4** — population ranges work reasonably.
+
+For low-II markers, **the person's own previous values are the reference range.** This is the entire justification for tracking a personal baseline instead of chasing the lab's normal band.
+
+### 3d. Noise budget by marker
+
+CV_within and RCV (%), sorted by how far a value must move before the change is real. Population priors — **not this person's own**; say so when you use them.
+
+| Marker | CV_within | **RCV** | Practical meaning |
+|---|---|---|---|
+| MCV | ~1.8 | **5%** | Trust a single value |
+| HbA1c | ~2.5 | **7%** | Best low-noise anchor for a 3-month decision |
+| Calcium | ~2.8 | **8%** | Trust a single value |
+| HGB | ~3.2 | **9%** | |
+| Albumin | ~3.6 | **10%** | |
+| Glucose (fasting) | ~5.6 | **15%** | Only if truly fasted |
+| Creatinine | ~5.8 | **16%** | |
+| Cholesterol | ~6.7 | **19%** | |
+| ApoB | ~7.6 | **21%** | |
+| fT4 | ~7.8 | **22%** | |
+| fT3 | ~9.4 | **26%** | An "optimal-range" target usually sits inside this |
+| Vitamin D | ~14 | **39%** | Also seasonal — a confounder on top |
+| Ferritin | ~16 | **44%** | Read with CRP |
+| TSH | ~20 | **55%** | Plus ±20–50% diurnal — same time of morning, always |
+| TG | ~20 | **57%** | |
+| Insulin | ~22 | **60%** | Pulsatile; never decide on one draw |
+| HOMA-IR | ~23 | **64%** | Inherits both glucose and insulin error |
+| Cortisol | ~26 | **71%** | One random value is near-uninterpretable |
+| CRP | >30 | **>85%** | Only large moves mean anything |
+| Estradiol / FSH / LH | cycle-dominated | — | Meaningless without cycle phase; in irregular cycles, near-uninterpretable as a single point |
+
+### 3e. The decision rule — if noise ≥ signal, do not act
+
+Put the decision threshold and the confidence interval on the same line:
+
+- Threshold **outside** the CI → the measurement resolved it. **Act.**
+- Threshold **inside** the CI → the measurement did **not** resolve it. **Do not act on it.** In order of preference: (1) take the action that is safe across the whole interval — usually *change nothing*; (2) repeat under identical conditions and pool; (3) switch to a lower-noise marker answering the same question (HbA1c instead of HOMA-IR).
+
+Never "lean" toward the point estimate inside its own noise band — a number there carries no directional information. Example: HOMA-IR 2.0 → 1.5 looks like a 25% improvement, but RCV is ~64%. Statistically the two are the same number. Say so, rather than starting or stopping a drug on it.
+
+**Feed this back into Step 1, before drawing:** if the expected treatment effect is smaller than the marker's RCV, that marker **cannot** verify the treatment. Ordering it is theatre. Check this when designing the panel, not when reading it.
+
+## Step 4 — Confounders: systematic error (bias), not noise
+
+Step 3 handled **random** error — it averages out across draws. This step is **systematic** error: it pushes a result the same direction every time, so repeating the test reproduces the lie instead of cancelling it. No amount of averaging fixes a confounder; you have to know it's there.
 
 Check these *before* interpreting, and *before* crediting an intervention:
 
@@ -127,16 +203,19 @@ Morning draw, **12 h fasted** (water fine) · **no alcohol 72 h** · **no intens
 3. **Tier 3** with each trigger named.
 4. **Explicitly excluded** + why (this is signal, not filler).
 5. Prep protocol + cost/logistics.
-6. Where relevant, the noise caveat: which results won't be trustworthy on a single draw.
+6. The noise caveat: which results won't be trustworthy on a single draw, and — for any marker meant to verify an intervention — whether the expected effect even exceeds its RCV.
 
 **Interpreting results:**
 1. Lead with **what changes** — the 1–3 numbers that alter a decision.
-2. For each: value, direction vs last time, **whether the change exceeds RCV** (real) or not (noise).
-3. Confounder check *before* conclusions.
-4. Free computed ratios.
-5. Then the normal/unremarkable, briefly.
-6. Actions + the trigger for the next test, with a date.
+2. For each: value, **95% CI for the true value**, direction vs last time, and **whether the change exceeds RCV** (real) or not (noise). State the CI, not just the point.
+3. With **n ≥ 3 draws**: test the series against the flat model (χ²) before describing any direction; report the pooled estimate and its CI.
+4. Say explicitly which markers moved beyond noise and which did not — often only 2–3 of twenty did, and naming that is the main service.
+5. Confounder check (Step 4) *before* conclusions.
+6. Free computed ratios.
+7. Then the normal/unremarkable, briefly.
+8. Actions — and for every threshold, whether the CI actually cleared it. If not, say the measurement did not resolve it and act accordingly.
+9. Trigger and date for the next test.
 
 ## Boundaries
 
-Reference ranges are **population** ranges, and "optimal" targets are a separate, often stricter claim — label which you're using. Interpretation is for a specific person with a specific history: **surface the decision and its reasoning, don't issue a diagnosis or prescribe.** Anything that changes a prescription goes through their doctor. Red-flag results (severe anemia, glucose in diabetic range, markedly abnormal liver/kidney function, calcium disturbance) → say plainly that this needs prompt medical review, and don't bury it.
+Reference ranges are **population** ranges, and "optimal" targets are a separate, often stricter claim — label which you're using, and check the index of individuality (3c) before trusting a population range at all. If a previous reading of yours was built on a single noisy draw and later points contradict it, **say so plainly and revise** — a conclusion inherited from a noise peak is worse than no conclusion. Interpretation is for a specific person with a specific history: **surface the decision and its reasoning, don't issue a diagnosis or prescribe.** Anything that changes a prescription goes through their doctor. Red-flag results (severe anemia, glucose in diabetic range, markedly abnormal liver/kidney function, calcium disturbance) → say plainly that this needs prompt medical review, and don't bury it.
