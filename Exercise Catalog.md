@@ -13,6 +13,29 @@ Pick-list for the `plan-workout` skill. The agent **selects from here** (filtere
 
 > In-gym adaptations: Str, Pow, Hyp, ME, Stab. **Trained OUTSIDE the gym (not here):** VO₂max/Zone 5 (Norwegian), Zone 2 / long-duration (run), skill/gait (running technique), dance. See `Practices`.
 
+## Index — finding an exercise by muscle
+
+This catalog is grouped by **movement pattern**, not by muscle, because strength, power and skill adapt at the level of the pattern (`Training Adaptations (Galpin 9).md`, `ProPower (Power & RFD).md`). Hypertrophy is the exception — there the muscle *is* the unit (`Skeletal Muscle Hypertrophy.md`), so use this index when you're thinking in muscles.
+
+**"Back" has no section of its own — it is split across three patterns.** That's the most common lookup failure:
+
+| Looking for | Section(s) |
+|---|---|
+| **Lats** | Vertical pull · Horizontal pull |
+| **Erectors / lower back** | **Hinge** — 45° Back Extension, Romanian Deadlift, Deadlift |
+| **Traps / rhomboids / rear delt** | Horizontal pull · Isolation patches (Face Pulls) |
+| Chest | Horizontal push |
+| Shoulders (delts) | Vertical push · Isolation patches (Lateral Raises, Face Pulls) |
+| Biceps | Vertical pull · Isolation patches |
+| Triceps | Horizontal push (Dips) · Isolation patches |
+| Quads | Squat · Unilateral lower |
+| Hamstrings | Hinge |
+| Glutes | Hip extension / glute · Hinge · Unilateral lower |
+| Adductors | Unilateral lower (Cossack) · Knee/foot (Copenhagen) |
+| Calves / Achilles | Calf / lower-leg |
+| Abs / trunk | Core / anti-rotation · Carries |
+| Grip | Carries |
+
 ## Squat (knee-dominant)
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
 |---|---|---|---|---|---|---|
