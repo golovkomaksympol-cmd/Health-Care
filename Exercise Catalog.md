@@ -153,7 +153,7 @@ Sub-grouped by ProPower pattern. **Transfer is narrow — train the pattern you 
 |---|---|---|---|---|---|---|
 | Pogo Hops | ankle stiffness / reactive | Pow | BW | calf | |  |
 | Bounding | reactive horizontal | Pow | BW | calf, ecc | |  |
-| Skater Bounds | reactive lateral | Pow | BW | calf, ecc | |  |
+| Skater Bounds | reactive lateral | Pow | BW | calf, ecc | | [🎥](https://www.youtube.com/shorts/IkGOdk2VDJw) |
 | Depth Jump | reactive SSC (advanced) | Pow | box | calf, ecc, skill | |  |
 
 ### Landing / deceleration (eccentric power — the neglected one)
