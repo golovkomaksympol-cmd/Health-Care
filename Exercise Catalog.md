@@ -263,7 +263,7 @@ Same exercise, different setup → **different muscle does the work**. When an e
 | Dips | torso lean · elbow path | leaned forward, elbows out → **chest**; upright, elbows tucked → **triceps** |
 | Overhead Press (BB) | standing vs seated | standing → whole-body/**trunk** demand, less load; seated → more isolated **delts**, heavier possible. *Behind-the-neck: skip — shoulder risk, worse with hypermobility.* |
 | DB Shoulder Press | grip | neutral/hammer → **anterior delt**, shoulder-friendlier; pronated → slightly more **lateral delt** |
-| Lateral Raises | cable/lean vs dumbbell | leaning away on a cable → tension in the **stretched** position; dumbbell → tension at the **top** |
+| Lateral Raises | torso angle · cable-lean vs dumbbell | torso **upright** → **lateral delt**; torso leaned **forward** ~30° → the resistance vector moves behind the shoulder → **posterior delt** (a different exercise, not a "better feel"). Leaning away on a cable → tension in the **stretched** position; dumbbell → tension at the **top** |
 | Triceps | arm position | overhead extension → **long head** (stretched); pushdown → **lateral/medial heads** |
 
 ### Upper body — pull
@@ -278,6 +278,7 @@ Same exercise, different setup → **different muscle does the work**. When an e
 |---|---|---|
 | Kettlebell Swing | swing height | **Russian** (to chest/eye level) → **hip power** — this is the one the ProPower model wants; **American** (overhead) adds shoulder demand + lumbar extension → **skip with `spine⚠` / hypermobility** |
 | Push Press vs Overhead Press | leg drive | with leg drive → **power (RFD)**; strict → **shoulder strength** |
+| Skater Bounds · Bounding · Pogo Hops | what you do with the landing | **stick it** (land, freeze ~1 s, other foot never touches) → **eccentric deceleration + frontal-plane control**; **bounce off it** (shortest possible ground contact) → **reactive SSC / stiffness**. Two different adaptations from one movement — pick one per set, don't blend. Progress the stick version by **distance**, the bounce version by **contact time**. Height is not a variable in either — it only raises landing force |
 
 ### Core / carries
 | Exercise | What you change | Variant → emphasis |
