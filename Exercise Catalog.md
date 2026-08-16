@@ -187,6 +187,7 @@ Sub-grouped by ProPower pattern. **Transfer is narrow — train the pattern you 
 | Pallof Press | anti-rotation | Stab | cable/band | | |  |
 | Dead Bug | anti-extension, coordination | Stab | BW | | |  |
 | Standing Cable Rotation | rotation control | Stab/Hyp | cable | | ✓ |  |
+| Hanging Leg Raise | hip flexors, rectus | Hyp/ME | bar/+ball or DB | spine⚠(flexion) | ✓ |  |
 | Decline Crunch | rectus (dynamic flexion) | Hyp/ME | bench/+plate | spine⚠(flexion) | ✓ |  |
 | Russian Twist | obliques (rotation) | Hyp/ME | bench/+plate | spine⚠(flexion) | ✓ |  |
 
@@ -286,4 +287,5 @@ Same exercise, different setup → **different muscle does the work**. When an e
 | Carries | how the weight is held | **the position *is* the variant** — suitcase (one side) → **anti-lateral-flexion**; farmer (both) → **grip + trunk**; front-rack → **anti-extension + thoracic**; overhead → **shoulder stability**; bottom-up → **grip + cuff/shoulder control** |
 | Pallof Press | stance · distance from anchor | half-kneeling → removes leg drive, harder on the **trunk**; split stance → adds **hip stability**; further from the anchor → longer lever, harder |
 | Side Plank | base of support | from knees → regression; feet stacked → full; top leg forward → wider base, easier |
+| Hanging Leg Raise | where the movement happens | legs raised with a **neutral pelvis** (stop at hip height) → **hip flexors**, minimal spinal load; **posterior pelvic tilt / curling the pelvis up** at the top → **rectus abdominis**, but that's the loaded-flexion part — regress it under `spine⚠`. Bent knees → regression; straight legs or a load between the feet → progression |
 | Standing Cable Rotation | hips locked or free | hips locked → **trunk rotation control**; hips free → **whole-body rotational power** |
