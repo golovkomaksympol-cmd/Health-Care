@@ -93,3 +93,7 @@ The complex object is "hundreds of exercises × load × frequency × individual.
 - **Weakest in acute pathology.** With disc injury, fracture or radiculopathy, structure dominates and diagnosis outranks any dosing rule.
 - ❓ Whether FEEL work's near-zero fatigue cost holds at daily frequency in someone already training hard, or quietly accumulates.
 - ❓ For very low-load patterns, whether the effort→recovery→frequency chain binds tightly enough to matter at all.
+
+## Source
+
+Companion: `[[Models/Cost Latency]]` — why *novelty instead of intent* keeps winning in the moment. The driver is chosen on a slow clock; the impulse to add work arrives on a fast one, at a point where the session's cost is not yet perceptible.
