@@ -75,7 +75,7 @@ This catalog is grouped by **movement pattern**, not by muscle, because strength
 |---|---|---|---|---|---|---|
 | Bulgarian Split Squat | quad, glute | Str/Hyp | DB/KB | U, ecc | ✓ | [🎥](https://www.youtube.com/shorts/or1frhkjBDc) |
 | Reverse Lunge | quad, glute | Hyp | DB | U | |  |
-| Cossack Squat | adductors, mobility, lateral stability | Stab/Mob | BW/light | U | ✓ |  |
+| Cossack Squat | adductors, mobility, lateral stability | Stab/Mob | BW/light | U | ✓ | [🎥](https://www.youtube.com/shorts/TR4GN3rLuQ8) |
 
 ## Horizontal push
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
