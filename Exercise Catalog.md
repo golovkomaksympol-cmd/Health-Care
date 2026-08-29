@@ -255,6 +255,7 @@ Same exercise, different setup → **different muscle does the work**. When an e
 | Step-up | box height / torso | higher box + forward lean → **glutes**; lower box + upright → **quads** |
 | Bulgarian Split Squat | torso + front-foot distance | upright, foot closer → **quads**; leaned forward, foot further → **glutes/hamstrings** |
 | Reverse Lunge | step length | short step → **quads**; long step → **glutes/hamstrings** |
+| Cossack Squat | rep style · counterweight | **rocking** (stay low, shift side to side, never stand up) → **mobility / adductor range**, warm-up tool; **full reps** (stand between sides) → **strength + frontal-plane control** on the working leg. A **counterweight held at the chest** (goblet KB/DB, 8–12 kg) is a *technique* tool before it is load — it lets you sit back further with an upright torso, so depth and heel contact improve. Depth is capped by **neutral spine and a flat working heel**, never by how low you can get |
 | Standing vs Seated Calf Raise | knee angle | knee **straight** → **gastrocnemius**; knee **bent** → **soleus** (this is why both rows exist; Alfredson uses both) |
 
 ### Upper body — push
