@@ -5,7 +5,7 @@ Pick-list for the `plan-workout` skill. The agent **selects from here** (filtere
 **Legend**
 - **Adaptation:** Str=strength · Pow=power · Hyp=hypertrophy · ME=muscular endurance · Stab=stability/core · Mob=mobility · Rehab
 - **Equip:** BB=barbell · DB=dumbbell · KB=kettlebell · trap=trap-bar · mini=mini/EZ-bar · cable · mach=machine · BW=bodyweight · band · box · bench · rack · med=med-ball · wall
-- **Flags:** `U`=unilateral · `spine⚠`=loaded spine → neutral/control (hypermobility) · `calf`=loads calf/Achilles · `ecc`=eccentric/CK-heavy (novel-load caution) · `skill`=high technique · `wall`=needs wall/partner/space to throw (impractical in a standard commercial gym)
+- **Flags:** `U`=unilateral · `spine⚠`=loaded spine → neutral/control (hypermobility) · `calf`=loads calf/Achilles · `ecc`=eccentric/CK-heavy (novel-load caution) · `skill`=high technique · `wall`=needs wall/partner/space to throw (impractical in a standard commercial gym) · `knee⚠(heavy)`=high patellofemoral pressure at heavy loads — light and terminal-range if the knee is irritable
 - **Fam** (familiar) = already in **your** current repertoire → lower skill/injury risk than a novel movement. Mark these yourself with `✓`; the planner prefers them when readiness is low or a novel stimulus would stack risk. An empty column is fine — it just means "nothing marked yet".
 - **🎥** = direct link to a curated form-reference clip for that exact movement. **A blank cell means no clip has been chosen yet** — don't fabricate a URL and don't substitute a search link; either leave it blank or tell the trainee to search the exercise name. The column fills in over time.
 - **One row = one movement.** Don't merge two exercises into a row with a slash; give each its own row. A parenthetical is an alias for the *same* movement (e.g. `Plyo Push-up (clap)`), not a second exercise. One clip per row is the norm; a second is fine only when it covers the *same* movement from another angle.
@@ -44,7 +44,8 @@ This catalog is grouped by **movement pattern**, not by muscle, because strength
 | Goblet Squat | quads, glutes | Hyp/ME | DB/KB | | ✓ | [🎥](https://www.youtube.com/shorts/ZBAd1g1z6qs) |
 | Hack Squat | quads | Str/Hyp | mach | | ✓ | [🎥](https://www.youtube.com/shorts/cFGgMO-ENiQ) |
 | Leg Press | quads, glutes | Str/Hyp | mach | | ✓ | [🎥](https://www.youtube.com/shorts/EotSw18oR9w) |
-| Leg Extension | quads (isolation) | Hyp | mach | | ✓ | [🎥](https://www.youtube.com/shorts/iQ92TuvBqRo) |
+| Leg Extension | quads (isolation) | Hyp | mach | knee⚠(heavy) | ✓ | [🎥](https://www.youtube.com/shorts/iQ92TuvBqRo) |
+| Belt Squat | quads, glutes — **no axial load** | Str/Hyp | belt-squat mach | | |  |
 
 ## Hinge (hip-dominant)
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
@@ -54,7 +55,8 @@ This catalog is grouped by **movement pattern**, not by muscle, because strength
 | Trap-bar Deadlift | post chain, quads | Str | trap | spine⚠ | ✓ |  |
 | Single-leg RDL | hamstring, glute, balance | Hyp/Stab | DB/KB | U, ecc | |  |
 | 45° Back Extension | erectors, glutes, hams | Hyp/ME | mach/+plate | spine⚠ | ✓ |  |
-| Leg Curl | hamstrings (knee flexion) | Hyp | mach | | ✓ |  |
+| Leg Curl (seated preferred) | hamstrings (knee flexion) | Hyp | mach | | ✓ |  |
+| Reverse Hyper | glutes, hamstrings → erectors via hip extension, torso fixed | Hyp/Rehab | reverse-hyper mach | | |  |
 
 ## Hip extension / glute (patterning)
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
@@ -86,12 +88,15 @@ This catalog is grouped by **movement pattern**, not by muscle, because strength
 | Seated Machine (Incline) Press | chest | Hyp | mach | | ✓ |  |
 | Dips (parallel bar) | lower chest, triceps | Str/Hyp | BW/+weight, bar | | ✓ | |
 | Bench Dips | triceps | Hyp | bench, BW | | | [🎥](https://www.youtube.com/shorts/cFK5G2Exwwo) |
+| Seated Dip Machine | triceps, lower chest | Hyp | mach | | |  |
+| Chest Press (machine) | chest, triceps | Hyp/Str | mach | | ✓ |  |
 
 ## Vertical push
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
 |---|---|---|---|---|---|---|
 | Overhead Press (BB) | delts, triceps, trunk | Str/Hyp | BB/mini, rack | spine⚠(overhead) | ✓ | [🎥](https://www.youtube.com/shorts/4LBVP2Oe7fg) [🎥](https://www.youtube.com/shorts/zoN5EH50Dro) |
 | DB Shoulder Press | delts | Hyp/Str | DB | | ✓ | [🎥](https://www.youtube.com/shorts/k6tzKisR3NY) |
+| Machine Shoulder Press (converging) | delts | Hyp/Str | mach | | |  |
 
 ## Horizontal pull
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
@@ -203,6 +208,7 @@ Sub-grouped by ProPower pattern. **Transfer is narrow — train the pattern you 
 |---|---|---|---|---|---|---|
 | Lateral Raises | side delts | Hyp | DB/cable | | ✓ | [🎥](https://www.youtube.com/shorts/lMYs7FY8os4) [🎥](https://www.youtube.com/shorts/Kl3LEzQ5Zqs) |
 | Face Pulls | rear delts, shoulder health | Hyp/Stab | cable/band | | ✓ | [🎥](https://www.youtube.com/shorts/YjOb2nFvFy0) |
+| Rear-delt Pec Deck (reverse fly) | rear delts, rhomboids | Hyp | mach | | |  |
 | Biceps Curl | biceps | Hyp | DB/BB/mini | | ✓ | [🎥](https://www.youtube.com/shorts/MKWBV29S6c0) |
 | Triceps Pushdown | triceps | Hyp | cable | | ✓ | [🎥](https://www.youtube.com/shorts/d9l2AYTGIEs) |
 
@@ -230,6 +236,42 @@ Load-related knee pain (patellofemoral, ITB) responds to **hip and quad control*
 | Hip 90/90 | hip rotation mobility | Mob | BW | | ✓ |  |
 
 > **Glute activation priming** (Banded Glute Bridge, Clamshell, Lateral Band Walk) lives in **Hip extension / glute** above — use those rows rather than duplicating them here.
+
+---
+
+---
+
+## Machine notes — what each machine does well, where it bites, and the cue
+
+Source: Jeff Cavaliere's machine ranking (ATHLEAN-X, [video](https://youtu.be/x9jvUHbbIhU)), **re-weighed** rather than copied. His ranking optimises for shoulder/lumbar safety and hypertrophy from a physio's chair — mostly sound biomechanics, a few stylistic preferences. Two corrections for a **lax-tissue / control-limited trainee** (`Models/Core Stability.md`): (1) his "natural movement is always better" downgrades fixed-path machines, but when *control* is the limiter a fixed path is sometimes exactly the point; (2) any cue that adds torso motion under load (swinging on a row, hips driving on a curl) counts against, not for. Nothing here is removed from the catalog — these are the trade-offs to name when prescribing.
+
+| Machine | Good for | Where it bites | Cue / when to prefer it | Verdict |
+|---|---|---|---|---|
+| **Leg Curl — lying** | hamstring isolation | prone with hips flat → hamstring shortens at both joints (active insufficiency), hips lift, **lumbar extension under load** | angled pad (hips ~30°) fixes most of it; otherwise choose seated | avoid if a seated one exists |
+| **Leg Curl — seated** | hamstring at **long length** — more growth than prone in a direct comparison (Maeo 2021); hip flexors and lumbar out of the movement | none of note | lower with two legs, lift with one for controlled overload | **preferred** |
+| **Hip Abduction / Adduction (seated)** | targeted glute-med (abd) and adductor (add) loading with **full control of load and range** | seated is not the functional plane; "builds glutes" is glute *med*, not max (see Variant selection) | upright → glute med; **for a frontal-plane control deficit this is the *load* tool** — band walks / lateral lunges are the *control* tool; use both, don't swap one for the other | keep; Cavaliere over-downgrades it |
+| **Lateral Raise machine** | strict path | pads fix the forearm → shoulder can't rotate out → impingement-prone at the top | DB or cable with **thumb slightly above pinky** | prefer DB/cable |
+| **Preacher Curl (flat pad)** | biceps at long length | elbow becomes a rigid fulcrum, distal tendon exposed at heavy loads | choose a pad that slopes away; standing with elbows braced is fine | caution |
+| **Chest Fly machine (pec deck, chest)** | pec adduction | fixed arc; start position can **overstretch the anterior capsule** if arm span doesn't match | set the start inside your range, not at the machine's | caution; cable crossover is the same movement without the fixed arc |
+| **Chest-supported Row** | mid-back with **zero spinal load** — the go-to when the back or neck is irritated | the chest pad tends to round the shoulders forward | chest lifts off the pad slightly, glutes lightly tensed on the prone version | **good** |
+| **Seated Dip machine** | triceps/lower chest when the shoulder girdle shouldn't take body weight (bar dips off the table) | — | arms travel slightly behind the torso → long head | good alternative to bar dips |
+| **Leg Press** | quad loading with a supported back; controlled ROM — the **return-from-injury** tool | no full hip extension → glutes under-stimulated; heavy loads shift to ligaments; not a squat replacement | feet high → less knee, more hip; treat as a supplement | good, with the caveat |
+| **Smith machine** | spotter-free pressing | fixed bar path forces the body to fit the machine; squat ankle mechanics distorted; **balance is taken over, so the number lies** | pressing yes; squatting only if nothing else | caution |
+| **Machine Shoulder Press (converging)** | wrist–elbow–shoulder in one line; **no standing lumbar extension** | — | sit **2 cm off the backrest** so the scapulae can move | **very good** — the overhead choice when the neck or low back is irritable |
+| **Rear-delt Pec Deck** | rear delt / rhomboids **seated** — removes the lumbar lean-back that standing face pulls invite | entering/exiting the handles can jar the shoulder | turn the torso, take one handle, then the other | **very good** |
+| **Chest Press machine** | elbows guided to ~45–60° — shoulder-friendly; safe to take to fatigue alone | — | — | **very good** |
+| **Leg Extension** | pure quad isolation; the only way to load quads with zero hip or spine involvement | **high patellofemoral pressure at heavy loads** (peak in the 90→45° range) | irritable knee → light load, **terminal range 0–40°**, rehab tempo; reclined seat → rectus femoris, upright → vasti | good, dose it |
+| **Hack Squat** | angled platform helps ankle dorsiflexion; back supported; good front-squat alternative when wrists/thoracic limit the barbell | still axial load through the shoulders | feet high on the platform → less knee | **good** |
+| **Reverse Hack** | forward lean → glutes | no final hip extension | pair with a full-extension movement (hip thrust) | ok |
+| **Functional trainer / cables** | any natural path, adjustable to your anatomy; ideal for rotation, Pallof, face pulls | needs a little skill to aim the cable | — | **very good** |
+| **Viking / landmine press** | standing press with neutral grip and a **forward-angled path** — less lumbar extension than a strict overhead bar, scapulae free | needs the implement | — | good overhead alternative |
+| **Seated Cable Row** | free torso — but see the correction | Cavaliere cues torso swing "to open the chest"; **for a lax spine that swing is lumbar flexion/extension under load** | torso still, ribs down; elbows low and tucked → lats, high and wide → upper back | good — **with a still torso** |
+| **Belt Squat** | **removes spinal compression entirely**; pelvis sits into a good position; full squat pattern | rare in commercial gyms | hands may assist heavy reps | **the squat of choice during any back episode** |
+| **Standing Calf Raise** | heavy gastrocnemius loading | the Achilles spring hides the muscle work | **4 s pause at the bottom** removes the stretch-shortening rebound | good |
+| **Cable Crossover** | full pec adduction in a safe stretch | — | high→low for lower chest, low→high for upper | good |
+| **Lat Pulldown** | dosable vertical pull when pull-ups are too much or too few | — | vary grips (see Variant selection) | **very good** |
+| **Reverse Hyper** | erector work **through hip extension with the torso fixed** — no axial compression, rhythmic lumbar decompression | evidence is mechanistic and anecdotal (no trials); rare machine | light, rhythmic, high reps | good when available — candidate for an extension-preference back |
+| **Hip Thrust machine** | resistance exactly at full hip extension — the one thing squats can't give; easy to set up, no bar on the pelvis | slow eccentrics hold the knee at ~90° under load → patellofemoral cost if the knee is irritable | shin vertical at lockout; ribs down; **normal tempo** | **very good** |
 
 ---
 
