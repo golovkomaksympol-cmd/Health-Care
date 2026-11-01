@@ -52,7 +52,7 @@ This catalog is grouped by **movement pattern**, not by muscle, because strength
 |---|---|---|---|---|---|---|
 | Romanian Deadlift | hamstrings, glutes, erectors | Str/Hyp | BB/DB | spine⚠, ecc | ✓ | [🎥](https://www.youtube.com/shorts/QbbURJEUALw) |
 | Conventional Deadlift | post chain, quads | Str | BB, rack | spine⚠ | | [🎥](https://www.youtube.com/shorts/K8a_Ab9R-aI) |
-| Trap-bar Deadlift | post chain, quads | Str | trap | spine⚠ | ✓ |  |
+| Trap-bar Deadlift | post chain, quads | Str | trap | spine⚠ | ✓ | [🎥](https://www.youtube.com/shorts/kpyCkyVIxjI) |
 | Single-leg RDL | hamstring, glute, balance | Hyp/Stab | DB/KB | U, ecc | |  |
 | 45° Back Extension | erectors, glutes, hams | Hyp/ME | mach/+plate | spine⚠ | ✓ |  |
 | Leg Curl (seated preferred) | hamstrings (knee flexion) | Hyp | mach | | ✓ |  |
@@ -177,7 +177,7 @@ Sub-grouped by ProPower pattern. **Transfer is narrow — train the pattern you 
 ## Carries (anti-lateral-flexion / grip / trunk — Core Stability)
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
 |---|---|---|---|---|---|---|
-| Suitcase Carry | obliques/QL (anti-lat-flex) | Stab/ME | DB/KB | U, calf | ✓ |  |
+| Suitcase Carry | obliques/QL (anti-lat-flex) | Stab/ME | DB/KB | U, calf | ✓ | [🎥](https://www.youtube.com/shorts/1OZfiMnK2QM) |
 | Farmer Carry | grip, trunk, total | Stab/ME | DB/KB/trap | calf | |  |
 | Front-rack Carry | anti-extension, trunk | Stab | KB/DB | calf | |  |
 | Overhead Carry | shoulder stab, anti-extension | Stab | KB/DB | calf | |  |
@@ -186,10 +186,11 @@ Sub-grouped by ProPower pattern. **Transfer is narrow — train the pattern you 
 ## Core / anti-rotation / stability (Core Stability model)
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
 |---|---|---|---|---|---|---|
-| McGill Curl-up | anti-extension (anterior core) | Stab | BW | | |  |
-| Side Plank | anti-lateral-flexion (QL/obliques) | Stab | BW | | |  |
-| Bird Dog | anti-rotation, spinal control | Stab | BW | | |  |
-| Pallof Press | anti-rotation | Stab | cable/band | | |  |
+| McGill Curl-up | anti-extension (anterior core) | Stab | BW | | | [🎥](https://www.youtube.com/shorts/s2oleno3WNg) |
+| Side Plank | anti-lateral-flexion (QL/obliques) | Stab | BW | | | [🎥](https://www.youtube.com/shorts/s2oleno3WNg) |
+| Bird Dog | anti-rotation, spinal control | Stab | BW | | | [🎥](https://www.youtube.com/shorts/s2oleno3WNg) |
+| Turkish Get-Up | shoulder stability, total-body control | Stab/Mob | KB | skill | ✓ | [🎥](https://www.youtube.com/shorts/Ht1T_gIW5qE) |
+| Pallof Press | anti-rotation | Stab | cable/band | | | [🎥](https://www.youtube.com/shorts/PIGq8nXakGE) |
 | Dead Bug | anti-extension, coordination | Stab | BW | | |  |
 | Standing Cable Rotation | rotation control | Stab/Hyp | cable | | ✓ |  |
 | Hanging Leg Raise | hip flexors, rectus | Hyp/ME | bar/+ball or DB | spine⚠(flexion) | ✓ |  |
@@ -218,7 +219,7 @@ Load-related knee pain (patellofemoral, ITB) responds to **hip and quad control*
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
 |---|---|---|---|---|---|---|
 | Spanish Squat | quad isometric, knee-friendly | Rehab/Str | band, rack | | | [🎥](https://www.youtube.com/shorts/lqAh-DpfoZA) |
-| Step-down (controlled) | knee control in the frontal plane | Rehab/Stab | box/step | U, ecc | |  |
+| Step-down (controlled) | knee control in the frontal plane | Rehab/Stab | box/step | U, ecc | | [🎥](https://www.youtube.com/shorts/oJmY2IyjGgg) |
 | Terminal Knee Extension (TKE) | vastus medialis, end-range knee ext | Rehab | band | | |  |
 | Wall Sit | quad isometric (analgesic) | Rehab/ME | BW | | |  |
 | Copenhagen Plank | adductors, pelvic control | Stab | bench | U, ecc | |  |
@@ -233,7 +234,7 @@ Load-related knee pain (patellofemoral, ITB) responds to **hip and quad control*
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
 |---|---|---|---|---|---|---|
 | Couch Stretch (hip flexor) | hip flexors (unblock glute) | Mob | BW | | |  |
-| Hip 90/90 | hip rotation mobility | Mob | BW | | ✓ |  |
+| Hip 90/90 | hip rotation mobility | Mob | BW | | ✓ | [🎥](https://www.youtube.com/shorts/PUVDCsAVxBc) |
 
 > **Glute activation priming** (Banded Glute Bridge, Clamshell, Lateral Band Walk) lives in **Hip extension / glute** above — use those rows rather than duplicating them here.
 
