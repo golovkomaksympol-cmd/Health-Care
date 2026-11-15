@@ -56,6 +56,7 @@ This catalog is grouped by **movement pattern**, not by muscle, because strength
 | Single-leg RDL | hamstring, glute, balance | Hyp/Stab | DB/KB | U, ecc | |  |
 | 45° Back Extension | erectors, glutes, hams | Hyp/ME | mach/+plate | spine⚠ | ✓ |  |
 | Leg Curl (seated preferred) | hamstrings (knee flexion) | Hyp | mach | | ✓ |  |
+| Kneeling Leg Curl (unilateral) | hamstrings, hip flexed — long-ish length; one leg at a time | Hyp | mach | U | |  |
 | Reverse Hyper | glutes, hamstrings → erectors via hip extension, torso fixed | Hyp/Rehab | reverse-hyper mach | | |  |
 
 ## Hip extension / glute (patterning)
@@ -207,7 +208,8 @@ Sub-grouped by ProPower pattern. **Transfer is narrow — train the pattern you 
 | Exercise | Primary | Adapt | Equip | Flags | Fam | 🎥 |
 |---|---|---|---|---|---|---|
 | Lateral Raises | side delts | Hyp | DB/cable | | ✓ | [🎥](https://www.youtube.com/shorts/lMYs7FY8os4) [🎥](https://www.youtube.com/shorts/Kl3LEzQ5Zqs) |
-| Face Pulls | rear delts, shoulder health | Hyp/Stab | cable/band | | ✓ | [🎥](https://www.youtube.com/shorts/YjOb2nFvFy0) |
+| Face Pulls | rear delts, shoulder health | Hyp/Stab | cable/band | | ✓ | [🎥](https://www.youtube.com/shorts/8686PLZB_1Q) |
+| Push-up Plus | serratus anterior (scapular protraction at lockout) — posture / scapular control | Stab | BW | | | [🎥](https://www.youtube.com/watch?v=RFbjeyq_ZPc) |
 | Rear-delt Pec Deck (reverse fly) | rear delts, rhomboids | Hyp | mach | | |  |
 | Biceps Curl | biceps | Hyp | DB/BB/mini | | ✓ | [🎥](https://www.youtube.com/shorts/MKWBV29S6c0) |
 | Triceps Pushdown | triceps | Hyp | cable | | ✓ | [🎥](https://www.youtube.com/shorts/d9l2AYTGIEs) |

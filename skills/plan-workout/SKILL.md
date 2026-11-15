@@ -56,6 +56,27 @@ These are the recurring errors the model exists to catch. **Check the assembled 
 - **Readiness**: sleep/HRV, soreness, injuries, illness, energy. If clearly fine → proceed; if low → deload (Step 4).
 - Rotation day (A/B/C) and focus are **auto-selected** from recent logs unless the user names one.
 
+### Step 1b — Clarifying questions (0–2, only when they change the plan)
+Do Step 2 (read sources) **first**, then decide. Ask **only** if the answer would change a concrete number or exercise choice in today's plan **and** the files don't already answer it. If nothing qualifies, ask nothing and plan straight away. Zero questions is the normal case, not a failure.
+
+**Test for each candidate question:** *"If the answer is A, I prescribe X; if B, I prescribe Y."* If X = Y, don't ask.
+
+Typical questions that pass the test, in priority order:
+| Gap in the files | Why it changes the plan | Example question |
+|---|---|---|
+| Open injury / pain flag in `Health profile` with no status in the last 2–3 logs | Decides whether you load the pattern, swap it, or run the rehab ladder | «Колено после Cossack — сейчас 0/10 или что-то чувствуется на лестнице?» |
+| Last session of today's **primary lift** logged without RIR, or with RIR that looks off (self-reported RIR is often underestimated — an AMRAP test usually shows more reps in reserve) | Decides whether to add weight, add reps or hold | «Hack 105×8 в прошлый раз — сколько ещё мог? 1–2 / 3–4 / 5+» |
+| Equipment the plan needs is `?` in `gyms.md` for today's gym | Decides between that exercise and a swap | «В этом зале есть трэп-гриф? Если нет — RDL со штангой» |
+| No readiness data (no Whoop record for this morning, user didn't report it) | Decides normal day vs. deload | «Recovery / сон сегодня?» |
+| Time or gym is unclear and the person has more than one option | Decides volume and the equipment filter | «Какой зал и сколько времени?» |
+
+Rules:
+- **Max 2 questions, one message, before the plan.** Number them. Short options (e.g. `1–2 / 3–4 / 5+`) beat open questions.
+- If the user wants the plan right now («просто план», «давай сразу»), or the gap isn't critical, **plan with a stated assumption instead of asking**: `Исхожу из: колено 0/10. Если нет — замени Cossack на Spanish Squat.` Put that assumption on one line under the Driver line.
+- Never ask what is already in the files: the logs, Whoop, `gyms.md`, `Health profile`, or the user's own message.
+- Never ask out of curiosity or for completeness: no «как настроение?», «какие цели?» when Step 0 already settled the goal.
+- When an answer reveals something durable (new equipment, an injury that has resolved, a corrected RIR habit), write it to the right file after the session (`gyms.md`, `Health profile`, `Practices`), so the same question is never asked twice.
+
 ## Step 2 — Read first (sources)
 1. `<Person>/Practices` → the weekly plan section — session order, A/B/C rotation, rules, priorities.
 2. `Exercise Catalog.md` (framework root) — the pick-list; respect tags/flags.
