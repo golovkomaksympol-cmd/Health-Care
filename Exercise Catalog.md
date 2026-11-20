@@ -55,7 +55,7 @@ This catalog is grouped by **movement pattern**, not by muscle, because strength
 | Trap-bar Deadlift | post chain, quads | Str | trap | spine⚠ | ✓ | [🎥](https://www.youtube.com/shorts/kpyCkyVIxjI) |
 | Single-leg RDL | hamstring, glute, balance | Hyp/Stab | DB/KB | U, ecc | |  |
 | 45° Back Extension | erectors, glutes, hams | Hyp/ME | mach/+plate | spine⚠ | ✓ |  |
-| Leg Curl (seated preferred) | hamstrings (knee flexion) | Hyp | mach | | ✓ |  |
+| Leg Curl (seated preferred) | hamstrings (knee flexion) | Hyp | mach | | ✓ | [🎥](https://www.youtube.com/shorts/WKFzO6U6lE4) |
 | Kneeling Leg Curl (unilateral) | hamstrings, hip flexed — long-ish length; one leg at a time | Hyp | mach | U | |  |
 | Reverse Hyper | glutes, hamstrings → erectors via hip extension, torso fixed | Hyp/Rehab | reverse-hyper mach | | |  |
 
@@ -68,7 +68,7 @@ This catalog is grouped by **movement pattern**, not by muscle, because strength
 | Clamshell | glute med (pelvic stab) | Stab/activation | band | | |  |
 | Lateral Band Walk | glute med (pelvic stab) | Stab/activation | band | | |  |
 | Cable Glute Kickback | glute max | Hyp | cable | U | |  |
-| Hip Abduction | glute med | Hyp | mach | | ✓ |  |
+| Hip Abduction | glute med | Hyp | mach | | ✓ | [🎥](https://www.youtube.com/shorts/osAJs8wn-Es) |
 | Hip Adduction | adductors | Hyp | mach | | ✓ |  |
 | Step-up | glute, quad, drive | Str/Hyp | DB/box | U, calf | |  |
 | Hip Airplane | glute + rotational stability | Stab | BW | U, skill | |  |
@@ -124,7 +124,7 @@ Sub-grouped by ProPower pattern. **Transfer is narrow — train the pattern you 
 |---|---|---|---|---|---|---|
 | Push Press | explosive vertical push (leg drive→overhead) | Pow/Str | BB/DB | skill | ✓ |  |
 | Jump Squat (light) | lower explosive | Pow | BW/light | calf, ecc | |  |
-| Box Jump | lower-body explosive + vertical | Pow | box | calf | ✓ |  |
+| Box Jump | lower-body explosive + vertical | Pow | box | calf | ✓ | [🎥](https://www.youtube.com/shorts/QUm1ngTeq5A) |
 | Trap-bar Jump | total-body explosive (loaded) | Pow | trap | calf, skill | |  |
 
 ### Hinge / posterior ballistic
@@ -192,7 +192,7 @@ Sub-grouped by ProPower pattern. **Transfer is narrow — train the pattern you 
 | Bird Dog | anti-rotation, spinal control | Stab | BW | | | [🎥](https://www.youtube.com/shorts/s2oleno3WNg) |
 | Turkish Get-Up | shoulder stability, total-body control | Stab/Mob | KB | skill | ✓ | [🎥](https://www.youtube.com/shorts/Ht1T_gIW5qE) |
 | Pallof Press | anti-rotation | Stab | cable/band | | | [🎥](https://www.youtube.com/shorts/PIGq8nXakGE) |
-| Dead Bug | anti-extension, coordination | Stab | BW | | |  |
+| Dead Bug | anti-extension, coordination | Stab | BW | | | [🎥](https://www.youtube.com/shorts/kSYl6XOzQ5U) |
 | Standing Cable Rotation | rotation control | Stab/Hyp | cable | | ✓ |  |
 | Hanging Leg Raise | hip flexors, rectus | Hyp/ME | bar/+ball or DB | spine⚠(flexion) | ✓ |  |
 | Decline Crunch | rectus (dynamic flexion) | Hyp/ME | bench/+plate | spine⚠(flexion) | ✓ |  |
