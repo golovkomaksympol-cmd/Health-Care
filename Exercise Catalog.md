@@ -68,7 +68,7 @@ This catalog is grouped by **movement pattern**, not by muscle, because strength
 | Clamshell | glute med (pelvic stab) | Stab/activation | band | | |  |
 | Lateral Band Walk | glute med (pelvic stab) | Stab/activation | band | | |  |
 | Cable Glute Kickback | glute max | Hyp | cable | U | |  |
-| Hip Abduction | glute med | Hyp | mach | | ✓ | [🎥](https://www.youtube.com/shorts/osAJs8wn-Es) |
+| Hip Abduction | glute med | Hyp | mach | | ✓ | [🎥](https://www.youtube.com/shorts/tu4o4quPv2k) |
 | Hip Adduction | adductors | Hyp | mach | | ✓ |  |
 | Step-up | glute, quad, drive | Str/Hyp | DB/box | U, calf | |  |
 | Hip Airplane | glute + rotational stability | Stab | BW | U, skill | |  |
